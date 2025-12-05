@@ -23,36 +23,36 @@ Player 6 (P6): E6, Collude until betrayed
         Collude first round. Collude, unless betrayed; then always betray.
 Player 7 (P7): E7, Error
         return '', ' ', or int 4
-Player 8 (P8): Mr. B, Random
-        Can't tell you yet
+Player 8 (P8): Team 0, The name the team gives to this strategy
+        How does this strategy decide?
 --------------------------------------------------------------------------------
 Section 1 - Player vs. Player
 --------------------------------------------------------------------------------
 Each column shows pts/round earned against each other player:
              P0     P1     P2     P3     P4     P5     P6     P7     P8
-vs. P0 :    0.0  100.0   50.0    0.0    0.0   27.9    0.0 -250.0   48.9
-vs. P1 : -500.0    0.0 -375.0 -375.0 -254.1 -251.4 -251.3 -250.0 -375.0
-vs. P2 : -250.0  -75.0    0.0 -200.8 -198.7  -76.8  -77.8 -250.0 -158.5
-vs. P3 :    0.0  -75.0 -196.0    0.0    0.0  -14.4    0.0 -250.0  -96.3
-vs. P4 :    0.0 -244.3 -198.7    0.0    0.0  -54.9    0.0 -250.0 -160.6
-vs. P5 : -139.3 -248.0 -370.8  -72.0  -63.9    0.0  -91.8 -250.0 -359.6
-vs. P6 :    0.0 -248.1 -368.1    0.0    0.0  -88.0    0.0 -250.0 -386.2
+vs. P0 :    0.0  100.0   50.0    0.0    0.0    1.0    0.0 -250.0   46.2
+vs. P1 : -500.0    0.0 -376.1 -376.2 -253.5 -251.7 -251.7 -250.0 -369.3
+vs. P2 : -250.0  -73.5    0.0 -200.7 -200.5  -77.0  -76.6 -250.0 -147.4
+vs. P3 :    0.0  -73.4 -196.5    0.0    0.0  -18.0    0.0 -250.0  -75.6
+vs. P4 :    0.0 -245.1 -197.5    0.0    0.0  -94.6    0.0 -250.0 -138.7
+vs. P5 :   -4.9 -247.7 -370.1  -90.2 -101.8    0.0  -56.2 -250.0 -363.1
+vs. P6 :    0.0 -247.6 -368.5    0.0    0.0  -51.6    0.0 -250.0 -360.5
 vs. P7 : -250.0 -250.0 -250.0 -250.0 -250.0 -250.0 -250.0    0.0 -250.0
-vs. P8 : -244.7  -75.0 -182.2 -196.9 -166.9  -76.9  -58.1 -250.0    0.0
-TOTAL  :-1384.0-1115.4-1890.8-1094.7 -933.6 -784.5 -729.0-2000.0-1737.3
+vs. P8 : -231.0  -83.0 -194.3 -199.1 -145.3  -85.9  -70.3 -250.0    0.0
+TOTAL  :-1235.9-1120.1-1903.0-1116.2 -951.1 -827.8 -704.8-2000.0-1658.3
 --------------------------------------------------------------------------------
 Section 2 - Leaderboard
 --------------------------------------------------------------------------------
 Average points per round:
 Team name (P#):  Score      with strategy name
-E6        (P6):      -81.0 points with Collude until betrayed                  
-E5        (P5):      -87.2 points with Collude first 100 rounds unless betrayed
-E4        (P4):     -103.7 points with Use early history                       
-E3        (P3):     -121.6 points with Collude but retaliate                   
-E1        (P1):     -123.9 points with Betray                                  
-E0        (P0):     -153.8 points with Collude                                 
-Mr. B     (P8):     -193.0 points with Random                                  
-E2        (P2):     -210.1 points with Alternate                               
+E6        (P6):      -78.3 points with Collude until betrayed                  
+E5        (P5):      -92.0 points with Collude first 100 rounds unless betrayed
+E4        (P4):     -105.7 points with Use early history                       
+E1        (P1):     -124.5 points with Betray                                  
+E3        (P3):     -124.0 points with Collude but retaliate                   
+E0        (P0):     -137.3 points with Collude                                 
+Team 0    (P8):     -184.3 points with The name the team gives to this strategy
+E2        (P2):     -211.4 points with Alternate                               
 E7        (P7):     -222.2 points with Error                                   
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -321,9 +321,9 @@ team0---------------------------------------------------------------------------
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Mr. B' # Only 10 chars displayed.
-strategy_name = 'Random'
-strategy_description = 'Can\'t tell you yet'
+team_name = 'Team 0' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -384,8 +384,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
-ccccccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBBBBBB
+ccccccccccccccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E0(P0) "Collude"
@@ -393,8 +393,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBB
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
+CcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
+CBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E0(P0) "Collude"
@@ -405,8 +405,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCC
-CCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E0(P0) "Collude"
@@ -414,17 +414,17 @@ CCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--139.28571428571428 pt/round: E0(P0) "Collude"
-27.857142857142858 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-4.901960784313726 pt/round: E0(P0) "Collude"
+0.9803921568627451 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCccccccccccccccccccccccccccccccccccccccc
-CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCCCCc
+CCCCCCCCCCCCCCCCCCCCCB
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E0(P0) "Collude"
@@ -435,8 +435,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E0(P0) "Collude"
@@ -447,20 +447,20 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
-cccccccccccccccccccccccccccccccccccc
-                                    
+cccccccccccccccccccccccccccccccccccccc
+                                      
 
 --------------------------------------------------------------------------------
--244.68085106382978 pt/round: E0(P0) "Collude"
-48.93617021276596 pt/round: Mr. B(P8) "Random"
-CccCCCcCCcCCcccccCcCCccCCcCCccCccCcccCCcCCCCccccCCCccCCCccCCCCCccCcCCccccCccccCc
-CBBCCCBCCBCCBBBBBCBCCBBCCBCCBBCBBCBBBCCBCCCCBBBBCCCBBCCCBBCCCCCBBCBCCBBBBCBBBBCB
+-230.97826086956522 pt/round: E0(P0) "Collude"
+46.19565217391305 pt/round: Team 0(P8) "The name the team gives to this strategy"
+cCcCCCcCCcCCCcccCCccCCCccCCCCccccCCccCCCCcCccCCccCcCcCCcCcCCccCccCCCcCccCCCcCCCc
+BCBCCCBCCBCCCBBBCCBBCCCBBCCCCBBBBCCBBCCCCBCBBCCBBCBCBCCBCBCCBBCBBCCCBCBBCCCBCCCB
 
-cCcCcCccCCCCCccCCcCCcCCCCCCcCcCccCCCCCCCcCccccCCccCcCCcccCcCCccCCCccCccCCcCccCCc
-BCBCBCBBCCCCCBBCCBCCBCCCCCCBCBCBBCCCCCCCBCBBBBCCBBCBCCBBBCBCCBBCCCBBCBBCCBCBBCCB
+CCcCCcCCccCCCccCccccccCcccCCCCCccCCCccCccCccCccccCcccCCCccCCCcCCCCcCccCCCCccCCCC
+CCBCCBCCBBCCCBBCBBBBBBCBBBCCCCCBBCCCBBCBBCBBCBBBBCBBBCCCBBCCCBCCCCBCBBCCCCBBCCCC
 
-CcCccCCCcCCCcCccccccCcccccCC
-CBCBBCCCBCCCBCBBBBBBCBBBBBCC
+CCcCcCcccCcCccCCccCCccCC
+CCBCBCBBBCBCBBCCBBCCBBCC
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -474,62 +474,53 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-BBBBBBBBBBBBBBBBBBBBBBBBB
-ccccccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+ccccccccccccccccccccccccccccccccc
 
 --------------------------------------------------------------------------------
--75.0 pt/round: E1(P1) "Betray"
--375.0 pt/round: E2(P2) "Alternate"
+-73.5042735042735 pt/round: E1(P1) "Betray"
+-376.0683760683761 pt/round: E2(P2) "Alternate"
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
 --------------------------------------------------------------------------------
--75.0 pt/round: E1(P1) "Betray"
--375.0 pt/round: E3(P3) "Collude but retaliate"
+-73.3644859813084 pt/round: E1(P1) "Betray"
+-376.1682242990654 pt/round: E3(P3) "Collude but retaliate"
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbc
 
 --------------------------------------------------------------------------------
--244.2622950819672 pt/round: E1(P1) "Betray"
--254.0983606557377 pt/round: E4(P4) "Use early history"
+-245.07042253521126 pt/round: E1(P1) "Betray"
+-253.5211267605634 pt/round: E4(P4) "Use early history"
 BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--247.98850574712642 pt/round: E1(P1) "Betray"
--251.4367816091954 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-247.6510067114094 pt/round: E1(P1) "Betray"
+-251.6778523489933 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbb
-bbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--248.11827956989248 pt/round: E1(P1) "Betray"
--251.34408602150538 pt/round: E6(P6) "Collude until betrayed"
+-247.56944444444446 pt/round: E1(P1) "Betray"
+-251.73611111111111 pt/round: E6(P6) "Collude until betrayed"
 Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E1(P1) "Betray"
@@ -537,17 +528,20 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                                 
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                   
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+
+bbbbbbbbbbbbbbbbbbbbb
+                     
 
 --------------------------------------------------------------------------------
--75.0 pt/round: E1(P1) "Betray"
--375.0 pt/round: Mr. B(P8) "Random"
-BBBbBBBbbbBbBBbbBBBBBBBBbBBbbbBBbbbBbBBbBBBBbbbBbbbbBBbbBBbBbBbBBbbbbbbBbbBbbbBB
-cccbcccbbbcbccbbccccccccbccbbbccbbbcbccbccccbbbcbbbbccbbccbcbcbccbbbbbbcbbcbbbcc
+-82.95454545454545 pt/round: E1(P1) "Betray"
+-369.3181818181818 pt/round: Team 0(P8) "The name the team gives to this strategy"
+bbBBBBBbbbBbbbBBBBBbBBBbbbbBbBBBBbBbbBBBbBBbBbbBbBbBbbBbBbbbbbbbBbbbBBBbBbbbBbbb
+bbcccccbbbcbbbcccccbcccbbbbcbccccbcbbcccbccbcbbcbcbcbbcbcbbbbbbbcbbbcccbcbbbcbbb
 
-bbBBBbbBbBBbbBBbbBbb
-bbcccbbcbccbbccbbcbb
+BBbbBbbBBbbBBBbbBbBBBBBBbbBBbbbbbbbBbbBbbbBbBBbBBbBB
+ccbbcbbccbbcccbbcbccccccbbccbbbbbbbcbbcbbbcbccbccbcc
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -558,56 +552,59 @@ Section 3 - Game Data for Team E2
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
+CBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
+CcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 
 --------------------------------------------------------------------------------
--375.0 pt/round: E2(P2) "Alternate"
--75.0 pt/round: E1(P1) "Betray"
+-376.0683760683761 pt/round: E2(P2) "Alternate"
+-73.5042735042735 pt/round: E1(P1) "Betray"
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
--195.96774193548387 pt/round: E2(P2) "Alternate"
--200.80645161290323 pt/round: E3(P3) "Collude but retaliate"
+-196.52777777777777 pt/round: E2(P2) "Alternate"
+-200.69444444444446 pt/round: E3(P3) "Collude but retaliate"
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
 --------------------------------------------------------------------------------
--198.69281045751634 pt/round: E2(P2) "Alternate"
--198.69281045751634 pt/round: E4(P4) "Use early history"
+-197.5 pt/round: E2(P2) "Alternate"
+-200.5 pt/round: E4(P4) "Use early history"
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
 --------------------------------------------------------------------------------
--370.75 pt/round: E2(P2) "Alternate"
--76.75 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-370.0581395348837 pt/round: E2(P2) "Alternate"
+-77.03488372093024 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcb
+BbBbBbBbBbBb
 
 --------------------------------------------------------------------------------
--368.14516129032256 pt/round: E2(P2) "Alternate"
--77.8225806451613 pt/round: E6(P6) "Collude until betrayed"
+-368.4684684684685 pt/round: E2(P2) "Alternate"
+-76.57657657657657 pt/round: E6(P6) "Collude until betrayed"
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E2(P2) "Alternate"
@@ -615,20 +612,17 @@ BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
                                                                                 
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-                                
+cbcbcbcbcbcbcbcbcbcbcb
+                      
 
 --------------------------------------------------------------------------------
--182.20338983050848 pt/round: E2(P2) "Alternate"
--158.47457627118644 pt/round: Mr. B(P8) "Random"
-cbCBCBCBcbcBcbcbcBcbcbCbCBCBcbCBcBcBCbCbcBCBCbCBcBcBcbCbCbcBcBCBCbcBCBcBCbCBCbcB
-BbCcCcCcBbBcBbBbBcBbBbCbCcCcBbCcBcBcCbCbBcCcCbCcBcBcBbCbCbBcBcCcCbBcCcBcCbCcCbBc
+-194.34782608695653 pt/round: E2(P2) "Alternate"
+-147.3913043478261 pt/round: Team 0(P8) "The name the team gives to this strategy"
+CBcbcBcBcbcbcBcbCbcbcbCbcbcbCbCBcBCBcbcBcbCbcbCBcBCbCbcbcBCbcBcbCBcbCBCbCbCbCBCB
+CcBbBcBcBbBbBcBbCbBbBbCbBbBbCbCcBcCcBbBcBbCbBbCcBcCbCbBbBcCbBcBbCcBbCcCbCbCbCcCc
 
-cbcBcBCbCBcbcbCbcbcbCbcbcbCBcbCBcBcBCbCBcBcbcbcbcBcBcBcBcbCBcBcbCbcBCBcBcbCbCbcB
-BbBcBcCbCcBbBbCbBbBbCbBbBbCcBbCcBcBcCbCcBcBbBbBbBcBcBcBcBbCcBcBbCbBcCcBcBbCbCbBc
-
-cbcBcBCbCbcbCbCBc
-BbBcBcCbCbBbCbCcB
+cBCBcbcBCBCBcbcbcbcBCBcbcbCBcbCbCbc
+BcCcBbBcCcCcBbBbBbBcCcBbBbCcBbCbCbB
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -642,29 +636,26 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCC
-CCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--375.0 pt/round: E3(P3) "Collude but retaliate"
--75.0 pt/round: E1(P1) "Betray"
+-376.1682242990654 pt/round: E3(P3) "Collude but retaliate"
+-73.3644859813084 pt/round: E1(P1) "Betray"
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
--200.80645161290323 pt/round: E3(P3) "Collude but retaliate"
--195.96774193548387 pt/round: E2(P2) "Alternate"
+-200.69444444444446 pt/round: E3(P3) "Collude but retaliate"
+-196.52777777777777 pt/round: E2(P2) "Alternate"
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E3(P3) "Collude but retaliate"
@@ -675,17 +666,17 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCC
+CCCCCCCC
 
 --------------------------------------------------------------------------------
--72.0 pt/round: E3(P3) "Collude but retaliate"
--14.4 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-90.22556390977444 pt/round: E3(P3) "Collude but retaliate"
+-18.045112781954888 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcb
-CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBb
+CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E3(P3) "Collude but retaliate"
@@ -693,8 +684,11 @@ CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBb
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E3(P3) "Collude but retaliate"
@@ -702,23 +696,20 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccc
-                      
+ccccccccccccccccccccccccccccccccccccc
+                                     
 
 --------------------------------------------------------------------------------
--196.8586387434555 pt/round: E3(P3) "Collude but retaliate"
--96.33507853403141 pt/round: Mr. B(P8) "Random"
-cBCcbCcbcBCCcBcBcBCcBcBcbcbcBCcbcBCcBCcBcbCCCcBcBcbcBCCCcbCcbCCcbCcBCCcbCCcbcBCC
-BcCBbCBbBcCCBcBcBcCBcBcBbBbBcCBbBcCBcCBcBbCCCBcBcBbBcCCCBbCBbCCBbCBcCCBbCCBbBcCC
+-199.11764705882354 pt/round: E3(P3) "Collude but retaliate"
+-75.58823529411765 pt/round: Team 0(P8) "The name the team gives to this strategy"
+cBCCcbCCcbcbCcbcBCCCCCCcbcBCcbCCCcBCcBcbCCCCcBcbCCcbCCCCcbcbcbCCCCCCCCcBcBCcbcBc
+BcCCBbCCBbBbCBbBcCCCCCCBbBcCBbCCCBcCBcBbCCCCBcBbCCBbCCCCBbBbBbCCCCCCCCBcBcCBbBcB
 
-CCCcbCCcBcbCcBcbcBCCCcBcBcBCCcbcbcbCcbCcBcbCCcBCCCCCcbCcbcbcBCCcBcbCCcBcBCcbCCCc
-CCCBbCCBcBbCBcBbBcCCCBcBcBcCCBbBbBbCBbCBcBbCCBcCCCCCBbCBbBbBcCCBcBbCCBcBcCBbCCCB
+bCCcbcbcBCcBcBcbcBCcBcbcBCCcbCCcBCCcbCCCCCcbcBCcbcbcbCcBcBCcbCCCCcbCcbCcbcbCcbCc
+bCCBbBbBcCBcBcBbBcCBcBbBcCCBbCCBcCCBbCCCCCBbBcCBbBbBbCBcBcCBbCCCCBbCBbCBbBbCBbCB
 
-BcbCcbcBcBcbCcbCcbcBCcBcBcbCCcb
-cBbCBbBcBcBbCBbCBbBcCBcBcBbCCBb
+bcbCcbcbcb
+bBbCBbBbBb
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -729,26 +720,29 @@ Section 3 - Game Data for Team E4
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--254.0983606557377 pt/round: E4(P4) "Use early history"
--244.2622950819672 pt/round: E1(P1) "Betray"
+-253.5211267605634 pt/round: E4(P4) "Use early history"
+-245.07042253521126 pt/round: E1(P1) "Betray"
 cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--198.69281045751634 pt/round: E4(P4) "Use early history"
--198.69281045751634 pt/round: E2(P2) "Alternate"
+-200.5 pt/round: E4(P4) "Use early history"
+-197.5 pt/round: E2(P2) "Alternate"
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E4(P4) "Use early history"
@@ -759,17 +753,20 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCC
+CCCCCCCC
 
 --------------------------------------------------------------------------------
--63.909774436090224 pt/round: E4(P4) "Use early history"
--54.88721804511278 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-101.79640718562874 pt/round: E4(P4) "Use early history"
+-94.61077844311377 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbb
+bbbbbbb
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E4(P4) "Use early history"
@@ -777,8 +774,8 @@ CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E4(P4) "Use early history"
@@ -789,83 +786,83 @@ cc c
                                                                                 
                                                                                 
 
-                  
-                  
+      
+      
 
 --------------------------------------------------------------------------------
--166.93121693121694 pt/round: E4(P4) "Use early history"
--160.58201058201058 pt/round: Mr. B(P8) "Random"
-CCCcBCCCCCCCcBCCcbCcBcbBcBcBcbbBcBCcBCCcbbbBcBCCCCCCCcBCCcBCCcBcBCCcBcBcbBcbBCCC
-CCCBcCCCCCCCBcCCBbCBcBbcBcBcBbbcBcCBcCCBbbbcBcCCCCCCCBcCCBcCCBcBcCCBcBcBbcBbcCCC
+-145.3038674033149 pt/round: E4(P4) "Use early history"
+-138.67403314917127 pt/round: Team 0(P8) "The name the team gives to this strategy"
+cBcbcbbBcBcBCcBCCcBCcbbbBCCCcBcBcBCcbbbbBCcBCcBcBCCcBcBcbbbBCCCcBcbBcbbbbbBcBCCC
+BcBbBbbcBcBcCBcCCBcCBbbbcCCCBcBcBcCBbbbbcCBcCBcBcCCBcBcBbbbcCCCBcBbcBbbbbbcBcCCC
 
-CcBcbbbbBcBCcbbbBcBcBcbbBcbbbBcbBCcbbbBCCcBCCcBcbBcBcbBCcbbbbBcbbbbBcBCcbbBcbBCc
-CBcBbbbbcBcCBbbbcBcBcBbbcBbbbcBbcCBbbbcCCBcCCBcBbcBcBbcCBbbbbcBbbbbcBcCBbbcBbcCB
+cbBCcBCCCCCcBCcBCCCCcBCCcBCCCCcbbbBCcBcBcBCCcBcBCcBcBCCcBcBCcbbBCCcBCcbBCcBCCcBC
+BbcCBcCCCCCBcCBcCCCCBcCCBcCCCCBbbbcCBcBcBcCCBcBcCBcBcCCBcBcCBbbcCCBcCBbcCBcCCBcC
 
-bbBcbbbbBCcBcBCcbBcBcBCCcbbBc
-bbcBbbbbcCBcBcCBbcBcBcCCBbbcB
+cBcBcBCCCCCCCCCcBcBCc
+BcBcBcCCCCCCCCCBcBcCB
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E5
 --------------------------------------------------------------------------------
-27.857142857142858 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--139.28571428571428 pt/round: E0(P0) "Collude"
+0.9803921568627451 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-4.901960784313726 pt/round: E0(P0) "Collude"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-CCCCCCCCCCCCCCCCCCCCCccccccccccccccccccccccccccccccccccccccc
+CCCCCCCCCCCCCCCCCCCCCB
+CCCCCCCCCCCCCCCCCCCCCc
 
 --------------------------------------------------------------------------------
--251.4367816091954 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--247.98850574712642 pt/round: E1(P1) "Betray"
+-251.6778523489933 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-247.6510067114094 pt/round: E1(P1) "Betray"
 cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbb
-bbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--76.75 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--370.75 pt/round: E2(P2) "Alternate"
+-77.03488372093024 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-370.0581395348837 pt/round: E2(P2) "Alternate"
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBb
+cbcbcbcbcbcb
 
 --------------------------------------------------------------------------------
--14.4 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--72.0 pt/round: E3(P3) "Collude but retaliate"
+-18.045112781954888 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-90.22556390977444 pt/round: E3(P3) "Collude but retaliate"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBb
-CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--54.88721804511278 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--63.909774436090224 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
 --------------------------------------------------------------------------------
--87.9746835443038 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--91.77215189873418 pt/round: E6(P6) "Collude until betrayed"
+-94.61077844311377 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-101.79640718562874 pt/round: E4(P4) "Use early history"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbb
+bbbbbbb
+
+--------------------------------------------------------------------------------
+-51.55038759689923 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-56.201550387596896 pt/round: E6(P6) "Collude until betrayed"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
@@ -873,17 +870,17 @@ CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
-cccccccccccccccccccccbbbbbbbbbbbbbbbbbb
-                                       
+cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                     
 
 --------------------------------------------------------------------------------
--76.92307692307692 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--359.61538461538464 pt/round: Mr. B(P8) "Random"
-CCCcBBbbbBbBBbBbbbbBBbbbBbbbBbBBbBBbBbBBbbbbBbbbbbbbbbBBbbBBbBBbbBbbBBbbBBbBBBbB
-CCCBccbbbcbccbcbbbbccbbbcbbbcbccbccbcbccbbbbcbbbbbbbbbccbbccbccbbcbbccbbccbcccbc
+-85.86206896551724 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-363.1034482758621 pt/round: Team 0(P8) "The name the team gives to this strategy"
+CcBBBBBbbBbbbbbBbBbBbBbbBBBBbbBbbBBBbBBbbBBBbbBbbbBbBbbbbbbBbBBbbBbbbbbBbBBbbbbB
+CBcccccbbcbbbbbcbcbcbcbbccccbbcbbcccbccbbcccbbcbbbcbcbbbbbbcbccbbcbbbbbcbccbbbbc
 
-BBbBbbBbBBBBBBBBBbBBbBbB
-ccbcbbcbcccccccccbccbcbc
+BbBbbBbbBbbbBBBbBBbbbBBBbBbBBBBBbbBBbbbbbBBBBBbBBbBbbbbbBBbbBBBbB
+cbcbbcbbcbbbcccbccbbbcccbcbcccccbbccbbbbbcccccbccbcbbbbbccbbcccbc
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -897,29 +894,26 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--251.34408602150538 pt/round: E6(P6) "Collude until betrayed"
--248.11827956989248 pt/round: E1(P1) "Betray"
+-251.73611111111111 pt/round: E6(P6) "Collude until betrayed"
+-247.56944444444446 pt/round: E1(P1) "Betray"
 cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--77.8225806451613 pt/round: E6(P6) "Collude until betrayed"
--368.14516129032256 pt/round: E2(P2) "Alternate"
+-76.57657657657657 pt/round: E6(P6) "Collude until betrayed"
+-368.4684684684685 pt/round: E2(P2) "Alternate"
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E6(P6) "Collude until betrayed"
@@ -927,8 +921,11 @@ cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 0.0 pt/round: E6(P6) "Collude until betrayed"
@@ -936,17 +933,17 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--91.77215189873418 pt/round: E6(P6) "Collude until betrayed"
--87.9746835443038 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-56.201550387596896 pt/round: E6(P6) "Collude until betrayed"
+-51.55038759689923 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E6(P6) "Collude until betrayed"
@@ -954,20 +951,17 @@ CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                              
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                         
 
 --------------------------------------------------------------------------------
--58.072916666666664 pt/round: E6(P6) "Collude until betrayed"
--386.1979166666667 pt/round: Mr. B(P8) "Random"
-cBBbbbbbBBbBBBbBbbBBBBBbbbBbbBbbBBBBbbbbBbbbBBbBbBbBBbbBbBBBBbBbbBBBbbBbBbbbBBbB
-Bccbbbbbccbcccbcbbcccccbbbcbbcbbccccbbbbcbbbccbcbcbccbbcbccccbcbbcccbbcbcbbbccbc
+-70.26143790849673 pt/round: E6(P6) "Collude until betrayed"
+-360.4575163398693 pt/round: Team 0(P8) "The name the team gives to this strategy"
+CCCCCCcbBbBBBbBbBbbbbbBBBBBBBbbBbBBbBbbBBbbbBbBbbBBbBBBBbbBBBBbbbbbBBBbbBBBBBbBb
+CCCCCCBbcbcccbcbcbbbbbcccccccbbcbccbcbbccbbbcbcbbccbccccbbccccbbbbbcccbbcccccbcb
 
-BBbBBbbbBBBBBBbbBBbBBBbBBBBbbBbbbbBBBbBBBBBBBBBBBbBbBbbbbBBBBbBBBBbbbbBBBbBBBBBb
-ccbccbbbccccccbbccbcccbccccbbcbbbbcccbcccccccccccbcbcbbbbccccbccccbbbbcccbcccccb
-
-BbBBBBBBBbbBbbbBBbbbBbbBbbbBbbbb
-cbcccccccbbcbbbccbbbcbbcbbbcbbbb
+BBBbBbBBBBbbBBBBbBbBBBbBbbbbBbbbBbbbbbbbbBbBbBbBbbBbBbBBBBBBbBBbBbbbBbbbb
+cccbcbccccbbccccbcbcccbcbbbbcbbbcbbbbbbbbcbcbcbcbbcbcbccccccbccbcbbbcbbbb
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -981,8 +975,8 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-                                    
-cccccccccccccccccccccccccccccccccccc
+                                      
+cccccccccccccccccccccccccccccccccccccc
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
@@ -990,8 +984,11 @@ cccccccccccccccccccccccccccccccccccc
                                                                                 
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-                                   
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+                     
+bbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
@@ -999,8 +996,8 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                                 
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-                                
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+                      
+cbcbcbcbcbcbcbcbcbcbcb
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
@@ -1008,11 +1005,8 @@ cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                      
-cccccccccccccccccccccc
+                                     
+ccccccccccccccccccccccccccccccccccccc
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
@@ -1023,8 +1017,8 @@ cc c
                                                                                 
                                                                                 
 
-                  
-                  
+      
+      
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
@@ -1032,8 +1026,8 @@ cc c
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-                                       
-cccccccccccccccccccccbbbbbbbbbbbbbbbbbb
+                                                                     
+cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
@@ -1041,112 +1035,100 @@ cccccccccccccccccccccbbbbbbbbbbbbbbbbbb
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-                                                              
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                         
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 --------------------------------------------------------------------------------
 -250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: Mr. B(P8) "Random"
+-250.0 pt/round: Team 0(P8) "The name the team gives to this strategy"
                                                                                 
-ccbcbbbccbbbbcccccbcccbcbccbbbcbccccbbbbbcccccccbbccbccbbccbccbbbbcccbcccbbbccbb
+bbbbbcbcccbbcccbbbbcbbbcccccccbbccbbcbbccbcccccbbbcbbcccccbccbcbccccccbbccbccccc
 
-                                                                                
-ccccbbbccbcbbcccbccbcccccccccbcccbbbbcbbbcbbbbbccccbbbcbbbbcccbcccbcbbbcccbbbbcb
-
-                   
-cbcbbccccccbcccbbcc
+                                
+bccbbcbccbccbbbbbbcbcccbbbcbbcbb
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team Mr. B
+Section 3 - Game Data for Team Team 0
 --------------------------------------------------------------------------------
-48.93617021276596 pt/round: Mr. B(P8) "Random"
--244.68085106382978 pt/round: E0(P0) "Collude"
-CBBCCCBCCBCCBBBBBCBCCBBCCBCCBBCBBCBBBCCBCCCCBBBBCCCBBCCCBBCCCCCBBCBCCBBBBCBBBBCB
-CccCCCcCCcCCcccccCcCCccCCcCCccCccCcccCCcCCCCccccCCCccCCCccCCCCCccCcCCccccCccccCc
+46.19565217391305 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-230.97826086956522 pt/round: E0(P0) "Collude"
+BCBCCCBCCBCCCBBBCCBBCCCBBCCCCBBBBCCBBCCCCBCBBCCBBCBCBCCBCBCCBBCBBCCCBCBBCCCBCCCB
+cCcCCCcCCcCCCcccCCccCCCccCCCCccccCCccCCCCcCccCCccCcCcCCcCcCCccCccCCCcCccCCCcCCCc
 
-BCBCBCBBCCCCCBBCCBCCBCCCCCCBCBCBBCCCCCCCBCBBBBCCBBCBCCBBBCBCCBBCCCBBCBBCCBCBBCCB
-cCcCcCccCCCCCccCCcCCcCCCCCCcCcCccCCCCCCCcCccccCCccCcCCcccCcCCccCCCccCccCCcCccCCc
+CCBCCBCCBBCCCBBCBBBBBBCBBBCCCCCBBCCCBBCBBCBBCBBBBCBBBCCCBBCCCBCCCCBCBBCCCCBBCCCC
+CCcCCcCCccCCCccCccccccCcccCCCCCccCCCccCccCccCccccCcccCCCccCCCcCCCCcCccCCCCccCCCC
 
-CBCBBCCCBCCCBCBBBBBBCBBBBBCC
-CcCccCCCcCCCcCccccccCcccccCC
-
---------------------------------------------------------------------------------
--375.0 pt/round: Mr. B(P8) "Random"
--75.0 pt/round: E1(P1) "Betray"
-cccbcccbbbcbccbbccccccccbccbbbccbbbcbccbccccbbbcbbbbccbbccbcbcbccbbbbbbcbbcbbbcc
-BBBbBBBbbbBbBBbbBBBBBBBBbBBbbbBBbbbBbBBbBBBBbbbBbbbbBBbbBBbBbBbBBbbbbbbBbbBbbbBB
-
-bbcccbbcbccbbccbbcbb
-bbBBBbbBbBBbbBBbbBbb
+CCBCBCBBBCBCBBCCBBCCBBCC
+CCcCcCcccCcCccCCccCCccCC
 
 --------------------------------------------------------------------------------
--158.47457627118644 pt/round: Mr. B(P8) "Random"
--182.20338983050848 pt/round: E2(P2) "Alternate"
-BbCcCcCcBbBcBbBbBcBbBbCbCcCcBbCcBcBcCbCbBcCcCbCcBcBcBbCbCbBcBcCcCbBcCcBcCbCcCbBc
-cbCBCBCBcbcBcbcbcBcbcbCbCBCBcbCBcBcBCbCbcBCBCbCBcBcBcbCbCbcBcBCBCbcBCBcBCbCBCbcB
+-369.3181818181818 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-82.95454545454545 pt/round: E1(P1) "Betray"
+bbcccccbbbcbbbcccccbcccbbbbcbccccbcbbcccbccbcbbcbcbcbbcbcbbbbbbbcbbbcccbcbbbcbbb
+bbBBBBBbbbBbbbBBBBBbBBBbbbbBbBBBBbBbbBBBbBBbBbbBbBbBbbBbBbbbbbbbBbbbBBBbBbbbBbbb
 
-BbBcBcCbCcBbBbCbBbBbCbBbBbCcBbCcBcBcCbCcBcBbBbBbBcBcBcBcBbCcBcBbCbBcCcBcBbCbCbBc
-cbcBcBCbCBcbcbCbcbcbCbcbcbCBcbCBcBcBCbCBcBcbcbcbcBcBcBcBcbCBcBcbCbcBCBcBcbCbCbcB
-
-BbBcBcCbCbBbCbCcB
-cbcBcBCbCbcbCbCBc
+ccbbcbbccbbcccbbcbccccccbbccbbbbbbbcbbcbbbcbccbccbcc
+BBbbBbbBBbbBBBbbBbBBBBBBbbBBbbbbbbbBbbBbbbBbBBbBBbBB
 
 --------------------------------------------------------------------------------
--96.33507853403141 pt/round: Mr. B(P8) "Random"
--196.8586387434555 pt/round: E3(P3) "Collude but retaliate"
-BcCBbCBbBcCCBcBcBcCBcBcBbBbBcCBbBcCBcCBcBbCCCBcBcBbBcCCCBbCBbCCBbCBcCCBbCCBbBcCC
-cBCcbCcbcBCCcBcBcBCcBcBcbcbcBCcbcBCcBCcBcbCCCcBcBcbcBCCCcbCcbCCcbCcBCCcbCCcbcBCC
+-147.3913043478261 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-194.34782608695653 pt/round: E2(P2) "Alternate"
+CcBbBcBcBbBbBcBbCbBbBbCbBbBbCbCcBcCcBbBcBbCbBbCcBcCbCbBbBcCbBcBbCcBbCcCbCbCbCcCc
+CBcbcBcBcbcbcBcbCbcbcbCbcbcbCbCBcBCBcbcBcbCbcbCBcBCbCbcbcBCbcBcbCBcbCBCbCbCbCBCB
 
-CCCBbCCBcBbCBcBbBcCCCBcBcBcCCBbBbBbCBbCBcBbCCBcCCCCCBbCBbBbBcCCBcBbCCBcBcCBbCCCB
-CCCcbCCcBcbCcBcbcBCCCcBcBcBCCcbcbcbCcbCcBcbCCcBCCCCCcbCcbcbcBCCcBcbCCcBcBCcbCCCc
-
-cBbCBbBcBcBbCBbCBbBcCBcBcBbCCBb
-BcbCcbcBcBcbCcbCcbcBCcBcBcbCCcb
+BcCcBbBcCcCcBbBbBbBcCcBbBbCcBbCbCbB
+cBCBcbcBCBCBcbcbcbcBCBcbcbCBcbCbCbc
 
 --------------------------------------------------------------------------------
--160.58201058201058 pt/round: Mr. B(P8) "Random"
--166.93121693121694 pt/round: E4(P4) "Use early history"
-CCCBcCCCCCCCBcCCBbCBcBbcBcBcBbbcBcCBcCCBbbbcBcCCCCCCCBcCCBcCCBcBcCCBcBcBbcBbcCCC
-CCCcBCCCCCCCcBCCcbCcBcbBcBcBcbbBcBCcBCCcbbbBcBCCCCCCCcBCCcBCCcBcBCCcBcBcbBcbBCCC
+-75.58823529411765 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-199.11764705882354 pt/round: E3(P3) "Collude but retaliate"
+BcCCBbCCBbBbCBbBcCCCCCCBbBcCBbCCCBcCBcBbCCCCBcBbCCBbCCCCBbBbBbCCCCCCCCBcBcCBbBcB
+cBCCcbCCcbcbCcbcBCCCCCCcbcBCcbCCCcBCcBcbCCCCcBcbCCcbCCCCcbcbcbCCCCCCCCcBcBCcbcBc
 
-CBcBbbbbcBcCBbbbcBcBcBbbcBbbbcBbcCBbbbcCCBcCCBcBbcBcBbcCBbbbbcBbbbbcBcCBbbcBbcCB
-CcBcbbbbBcBCcbbbBcBcBcbbBcbbbBcbBCcbbbBCCcBCCcBcbBcBcbBCcbbbbBcbbbbBcBCcbbBcbBCc
+bCCBbBbBcCBcBcBbBcCBcBbBcCCBbCCBcCCBbCCCCCBbBcCBbBbBbCBcBcCBbCCCCBbCBbCBbBbCBbCB
+bCCcbcbcBCcBcBcbcBCcBcbcBCCcbCCcBCCcbCCCCCcbcBCcbcbcbCcBcBCcbCCCCcbCcbCcbcbCcbCc
 
-bbcBbbbbcCBcBcCBbcBcBcCCBbbcB
-bbBcbbbbBCcBcBCcbBcBcBCCcbbBc
-
---------------------------------------------------------------------------------
--359.61538461538464 pt/round: Mr. B(P8) "Random"
--76.92307692307692 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCBccbbbcbccbcbbbbccbbbcbbbcbccbccbcbccbbbbcbbbbbbbbbccbbccbccbbcbbccbbccbcccbc
-CCCcBBbbbBbBBbBbbbbBBbbbBbbbBbBBbBBbBbBBbbbbBbbbbbbbbbBBbbBBbBBbbBbbBBbbBBbBBBbB
-
-ccbcbbcbcccccccccbccbcbc
-BBbBbbBbBBBBBBBBBbBBbBbB
+bBbCBbBbBb
+bcbCcbcbcb
 
 --------------------------------------------------------------------------------
--386.1979166666667 pt/round: Mr. B(P8) "Random"
--58.072916666666664 pt/round: E6(P6) "Collude until betrayed"
-Bccbbbbbccbcccbcbbcccccbbbcbbcbbccccbbbbcbbbccbcbcbccbbcbccccbcbbcccbbcbcbbbccbc
-cBBbbbbbBBbBBBbBbbBBBBBbbbBbbBbbBBBBbbbbBbbbBBbBbBbBBbbBbBBBBbBbbBBBbbBbBbbbBBbB
+-138.67403314917127 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-145.3038674033149 pt/round: E4(P4) "Use early history"
+BcBbBbbcBcBcCBcCCBcCBbbbcCCCBcBcBcCBbbbbcCBcCBcBcCCBcBcBbbbcCCCBcBbcBbbbbbcBcCCC
+cBcbcbbBcBcBCcBCCcBCcbbbBCCCcBcBcBCcbbbbBCcBCcBcBCCcBcBcbbbBCCCcBcbBcbbbbbBcBCCC
 
-ccbccbbbccccccbbccbcccbccccbbcbbbbcccbcccccccccccbcbcbbbbccccbccccbbbbcccbcccccb
-BBbBBbbbBBBBBBbbBBbBBBbBBBBbbBbbbbBBBbBBBBBBBBBBBbBbBbbbbBBBBbBBBBbbbbBBBbBBBBBb
+BbcCBcCCCCCBcCBcCCCCBcCCBcCCCCBbbbcCBcBcBcCCBcBcCBcBcCCBcBcCBbbcCCBcCBbcCBcCCBcC
+cbBCcBCCCCCcBCcBCCCCcBCCcBCCCCcbbbBCcBcBcBCCcBcBCcBcBCCcBcBCcbbBCCcBCcbBCcBCCcBC
 
-cbcccccccbbcbbbccbbbcbbcbbbcbbbb
-BbBBBBBBBbbBbbbBBbbbBbbBbbbBbbbb
+BcBcBcCCCCCCCCCBcBcCB
+cBcBcBCCCCCCCCCcBcBCc
 
 --------------------------------------------------------------------------------
--250.0 pt/round: Mr. B(P8) "Random"
+-363.1034482758621 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-85.86206896551724 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CBcccccbbcbbbbbcbcbcbcbbccccbbcbbcccbccbbcccbbcbbbcbcbbbbbbcbccbbcbbbbbcbccbbbbc
+CcBBBBBbbBbbbbbBbBbBbBbbBBBBbbBbbBBBbBBbbBBBbbBbbbBbBbbbbbbBbBBbbBbbbbbBbBBbbbbB
+
+cbcbbcbbcbbbcccbccbbbcccbcbcccccbbccbbbbbcccccbccbcbbbbbccbbcccbc
+BbBbbBbbBbbbBBBbBBbbbBBBbBbBBBBBbbBBbbbbbBBBBBbBBbBbbbbbBBbbBBBbB
+
+--------------------------------------------------------------------------------
+-360.4575163398693 pt/round: Team 0(P8) "The name the team gives to this strategy"
+-70.26143790849673 pt/round: E6(P6) "Collude until betrayed"
+CCCCCCBbcbcccbcbcbbbbbcccccccbbcbccbcbbccbbbcbcbbccbccccbbccccbbbbbcccbbcccccbcb
+CCCCCCcbBbBBBbBbBbbbbbBBBBBBBbbBbBBbBbbBBbbbBbBbbBBbBBBBbbBBBBbbbbbBBBbbBBBBBbBb
+
+cccbcbccccbbccccbcbcccbcbbbbcbbbcbbbbbbbbcbcbcbcbbcbcbccccccbccbcbbbcbbbb
+BBBbBbBBBBbbBBBBbBbBBBbBbbbbBbbbBbbbbbbbbBbBbBbBbbBbBbBBBBBBbBBbBbbbBbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: Team 0(P8) "The name the team gives to this strategy"
 -250.0 pt/round: E7(P7) "Error"
-ccbcbbbccbbbbcccccbcccbcbccbbbcbccccbbbbbcccccccbbccbccbbccbccbbbbcccbcccbbbccbb
+bbbbbcbcccbbcccbbbbcbbbcccccccbbccbbcbbccbcccccbbbcbbcccccbccbcbccccccbbccbccccc
                                                                                 
 
-ccccbbbccbcbbcccbccbcccccccccbcccbbbbcbbbcbbbbbccccbbbcbbbbcccbcccbcbbbcccbbbbcb
-                                                                                
-
-cbcbbccccccbcccbbcc
-                   
+bccbbcbccbccbbbbbbcbcccbbbcbbcbb
+                                
 
 --------------------------------------------------------------------------------
