@@ -1,316 +1,54 @@
 --------------------------------------------------------------------------------
 Section 0 - Line up
 --------------------------------------------------------------------------------
-Player 0 (P0): E0, Collude
-        Always collude.
-Player 1 (P1): E1, Betray
-        Always betray.
-Player 2 (P2): E2, Alternate
-        Collude, then alternate.
-Player 3 (P3): E3, Collude but retaliate
-        Collude first round. Collude, except in a round after getting 
-        a severe punishment.
-Player 4 (P4): E4, Use early history
-        Collude first round. Compare all rounds to the previous round and 
-        assume opponent will behave the same as the first time the previous 
-        round's result occurred. If the previous round's result never has 
-        happened, collude except after being severly punished.
-Player 5 (P5): E5, Collude first 100 rounds unless betrayed. Betray 101st round forward.
-        Betray if ever betrayed.
-        If I haven't been betrayed yet, I'll betray starting with the 100th roun
-        d.
-Player 6 (P6): E6, Collude until betrayed
-        Collude first round. Collude, unless betrayed; then always betray.
-Player 7 (P7): E7, Error
-        return '', ' ', or int 4
-Player 8 (P8): Team 0, The name the team gives to this strategy
+Player 0 (P0): Team 0, The name the team gives to this strategy
+        How does this strategy decide?
+Player 1 (P1): Team 1, The name the team gives to this strategy
+        How does this strategy decide?
+Player 2 (P2): Team 2, The name the team gives to this strategy
+        How does this strategy decide?
+Player 3 (P3): Team 3, The name the team gives to this strategy
+        How does this strategy decide?
+Player 4 (P4): Team 4, The name the team gives to this strategy
+        How does this strategy decide?
+Player 5 (P5): Team 5, The name the team gives to this strategy
+        How does this strategy decide?
+Player 6 (P6): Team 6, The name the team gives to this strategy
+        How does this strategy decide?
+Player 7 (P7): Team 7, The name the team gives to this strategy
+        How does this strategy decide?
+Player 8 (P8): Team 8, The name the team gives to this strategy
         How does this strategy decide?
 --------------------------------------------------------------------------------
 Section 1 - Player vs. Player
 --------------------------------------------------------------------------------
 Each column shows pts/round earned against each other player:
              P0     P1     P2     P3     P4     P5     P6     P7     P8
-vs. P0 :    0.0  100.0   49.5    0.0    0.0   34.0    0.0 -250.0   48.1
-vs. P1 : -500.0    0.0 -375.0 -375.9 -253.0 -252.0 -251.5 -250.0 -372.3
-vs. P2 : -247.6  -75.0    0.0 -199.0 -198.7  -76.8  -77.8 -250.0 -158.5
-vs. P3 :    0.0  -73.7 -199.0    0.0    0.0  -19.6    0.0 -250.0  -81.4
-vs. P4 :    0.0 -245.8 -198.7    0.0    0.0 -120.2    0.0 -250.0 -158.3
-vs. P5 : -169.9 -247.2 -370.8 -105.4 -126.2    0.0 -119.8 -250.0 -371.9
-vs. P6 :    0.0 -247.9 -368.3    0.0    0.0 -116.7    0.0 -250.0 -376.6
-vs. P7 : -250.0 -250.0 -250.0 -250.0 -250.0 -250.0 -250.0    0.0 -250.0
-vs. P8 : -240.7  -78.8 -162.3 -169.2 -168.9  -73.8  -67.7 -250.0    0.0
-TOTAL  :-1408.3-1118.4-1874.4-1099.5 -996.8 -875.2 -766.8-2000.0-1720.8
+vs. P0 :    0.0 -262.7 -226.0 -208.9 -229.4 -221.3 -229.8 -263.8 -284.5
+vs. P1 :   52.5    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P2 :   45.2    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P3 :   41.8    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P4 :   45.9    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P5 :   44.3    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P6 :   46.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P7 :   52.8    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+vs. P8 :   56.9    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+TOTAL  :  385.3 -262.7 -226.0 -208.9 -229.4 -221.3 -229.8 -263.8 -284.5
 --------------------------------------------------------------------------------
 Section 2 - Leaderboard
 --------------------------------------------------------------------------------
 Average points per round:
 Team name (P#):  Score      with strategy name
-E6        (P6):      -85.2 points with Collude until betrayed                  
-E5        (P5):      -97.2 points with Collude first 100 rounds unless betrayed
-E4        (P4):     -110.8 points with Use early history                       
-E3        (P3):     -122.2 points with Collude but retaliate                   
-E1        (P1):     -124.3 points with Betray                                  
-E0        (P0):     -156.5 points with Collude                                 
-Team 0    (P8):     -191.2 points with The name the team gives to this strategy
-E2        (P2):     -208.3 points with Alternate                               
-E7        (P7):     -222.2 points with Error                                   
+Team 0    (P0):       42.8 points with The name the team gives to this strategy
+Team 3    (P3):      -23.2 points with The name the team gives to this strategy
+Team 5    (P5):      -24.6 points with The name the team gives to this strategy
+Team 2    (P2):      -25.1 points with The name the team gives to this strategy
+Team 4    (P4):      -25.5 points with The name the team gives to this strategy
+Team 6    (P6):      -25.5 points with The name the team gives to this strategy
+Team 1    (P1):      -29.2 points with The name the team gives to this strategy
+Team 7    (P7):      -29.3 points with The name the team gives to this strategy
+Team 8    (P8):      -31.6 points with The name the team gives to this strategy
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-example0--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E0'
-strategy_name = 'Collude'
-strategy_description = 'Always collude.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    # This player always colludes.
-    return 'c'
-    --------------------------------------------------------------------------------
-example1--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E1'
-strategy_name = 'Betray'
-strategy_description = 'Always betray.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    #This example player always betrays.      
-    return 'b'
---------------------------------------------------------------------------------
-example2--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E2'
-strategy_name = 'Alternate'
-strategy_description = 'Collude, then alternate.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    # This player colludes on even numbered rounds (first round is round #0).
-    if len(my_history)%2 == 0:
-        return 'c'
-    else:
-        return 'b'
-    --------------------------------------------------------------------------------
-example3--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E3'
-strategy_name = 'Collude but retaliate'
-strategy_description = '''\
-Collude first round. Collude, except in a round after getting 
-a severe punishment.'''
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    if len(my_history)==0: # It's the first round; collude.
-        return 'c'
-    elif my_history[-1]=='c' and their_history[-1]=='b':
-        return 'b' # Betray if they were severely punished last time,
-    else:
-        return 'c' # otherwise collude.--------------------------------------------------------------------------------
-example4--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E4'
-strategy_name = 'Use early history'
-strategy_description = '''\
-Collude first round. Compare all rounds to the previous round and 
-assume opponent will behave the same as the first time the previous 
-round's result occurred. If the previous round's result never has 
-happened, collude except after being severly punished.'''
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    if len(my_history)==0: # It's the first round: collude
-        return 'c'
-    else:
-        # If there was a previous round just like the last one,
-        # do whatever they did in the round that followed it
-        
-        # Reference last round
-        recent_round_them = their_history[-1]
-        recent_round_me = my_history[-1]
-                    
-        # Look at rounds before that one
-        for round in range(len(my_history)-1):
-            prior_round_them = their_history[round]
-            prior_round_me = my_history[round]
-            # If one matches
-            if (prior_round_me == recent_round_me) and \
-                    (prior_round_them == recent_round_them):
-                return their_history[round]
-        # No match found
-        if my_history[-1]=='c' and their_history[-1]=='b':
-            return 'b' # Betray if they were severely punished last time
-        else:
-            return 'c' # Otherwise collude.--------------------------------------------------------------------------------
-example5--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E5'
-strategy_name = 'Collude first 100 rounds unless betrayed. Betray 101st round forward.'
-strategy_description = '''\
-Betray if ever betrayed.
-If I haven't been betrayed yet, I'll betray starting with the 100th round.
-'''
-
-import random
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    # If the other player has betrayed or this is the last half of the game, 
-    if 'b' in their_history or len(their_history)>100: 
-        return 'b'               # Betray.
-    else:
-        return 'c'         # but 90% of the time collude
-    
-    
-    --------------------------------------------------------------------------------
-example6--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E6'
-strategy_name = 'Collude until betrayed'
-strategy_description = '''\
-Collude first round. Collude, unless betrayed; then always betray.'''
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    if 'b' in their_history:
-        return 'b'
-    else:
-        return 'c'--------------------------------------------------------------------------------
-example7--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E7'
-strategy_name = 'Error'
-strategy_description = 'return \'\', \' \', or int 4'
-import random
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    #This example player always betrays.      
-    return random.choice(['', ' ', 4])
 --------------------------------------------------------------------------------
 team0--------------------------------------------------------------------------------
 ####
@@ -374,779 +112,1321 @@ if __name__ == '__main__':
               their_score=0,
               result='b')             
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team E0
---------------------------------------------------------------------------------
--500.0 pt/round: E0(P0) "Collude"
-100.0 pt/round: E1(P1) "Betray"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-
---------------------------------------------------------------------------------
--247.61904761904762 pt/round: E0(P0) "Collude"
-49.523809523809526 pt/round: E2(P2) "Alternate"
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-
-CcCcCcCcCcCcCcCcCcCcCcCcC
-CBCBCBCBCBCBCBCBCBCBCBCBC
-
---------------------------------------------------------------------------------
-0.0 pt/round: E0(P0) "Collude"
-0.0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
-0.0 pt/round: E0(P0) "Collude"
-0.0 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--169.9346405228758 pt/round: E0(P0) "Collude"
-33.98692810457516 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCcccccccccccccccccccccccccccccccccccccccccccccccccccc
-CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-
---------------------------------------------------------------------------------
-0.0 pt/round: E0(P0) "Collude"
-0.0 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--250.0 pt/round: E0(P0) "Collude"
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccccccccccccccccccc
-                                      
-
---------------------------------------------------------------------------------
--240.74074074074073 pt/round: E0(P0) "Collude"
-48.148148148148145 pt/round: Team 0(P8) "The name the team gives to this strategy"
-ccccccccCCcccccCCcccCcCcCcCcCCCCCCcCCcCCCcCCCcCCCcCCcccCCCCcCCCcccCCcCCcCcCCcCcc
-BBBBBBBBCCBBBBBCCBBBCBCBCBCBCCCCCCBCCBCCCBCCCBCCCBCCBBBCCCCBCCCBBBCCBCCBCBCCBCBB
-
-ccCccCCCCCCcCcCccCCCcCCCccCCCCcCccCccCccCcccCCCCCCCCCcCcCcCccccCCccCCCCCcCcCcCCC
-BBCBBCCCCCCBCBCBBCCCBCCCBBCCCCBCBBCBBCBBCBBBCCCCCCCCCBCBCBCBBBBCCBBCCCCCBCBCBCCC
-
-ccCccCCccccCcCCCcccCCcccccccc
-BBCBBCCBBBBCBCCCBBBCCBBBBBBBB
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E1
---------------------------------------------------------------------------------
-100.0 pt/round: E1(P1) "Betray"
--500.0 pt/round: E0(P0) "Collude"
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--75.0 pt/round: E1(P1) "Betray"
--375.0 pt/round: E2(P2) "Alternate"
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--73.70370370370371 pt/round: E1(P1) "Betray"
--375.9259259259259 pt/round: E3(P3) "Collude but retaliate"
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-
---------------------------------------------------------------------------------
--245.78313253012047 pt/round: E1(P1) "Betray"
--253.0120481927711 pt/round: E4(P4) "Use early history"
-BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbb
-bbbbbb
-
---------------------------------------------------------------------------------
--247.17741935483872 pt/round: E1(P1) "Betray"
--252.01612903225808 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--247.85276073619633 pt/round: E1(P1) "Betray"
--251.53374233128835 pt/round: E6(P6) "Collude until betrayed"
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbb
-bbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E1(P1) "Betray"
--250.0 pt/round: E7(P7) "Error"
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                                                                
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                                        
-
---------------------------------------------------------------------------------
--78.84615384615384 pt/round: E1(P1) "Betray"
--372.25274725274727 pt/round: Team 0(P8) "The name the team gives to this strategy"
-bbBBbBbbbBBbbbBBBbBBBBBbBbBbbbBBbbBBbbBBBBBbBbbBbbbBBbBbbbbBBBBbBbbbbbbBBBBBbbbB
-bbccbcbbbccbbbcccbcccccbcbcbbbccbbccbbcccccbcbbcbbbccbcbbbbccccbcbbbbbbcccccbbbc
-
-BbbBBbBbbbbbbbbbbBBbBBbbBBBbbBBbbbbBbbbBbBbbbBBBbBBbBBBbBBBBbBbBBBbBbBBBbbbbBBbB
-cbbccbcbbbbbbbbbbccbccbbcccbbccbbbbcbbbcbcbbbcccbccbcccbccccbcbcccbcbcccbbbbccbc
-
-BbbBBbbbBBbBbbbbbBBBBb
-cbbccbbbccbcbbbbbccccb
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E2
---------------------------------------------------------------------------------
-49.523809523809526 pt/round: E2(P2) "Alternate"
--247.61904761904762 pt/round: E0(P0) "Collude"
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-
-CBCBCBCBCBCBCBCBCBCBCBCBC
-CcCcCcCcCcCcCcCcCcCcCcCcC
-
---------------------------------------------------------------------------------
--375.0 pt/round: E2(P2) "Alternate"
--75.0 pt/round: E1(P1) "Betray"
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
---------------------------------------------------------------------------------
--198.97435897435898 pt/round: E2(P2) "Alternate"
--198.97435897435898 pt/round: E3(P3) "Collude but retaliate"
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
---------------------------------------------------------------------------------
--198.69281045751634 pt/round: E2(P2) "Alternate"
--198.69281045751634 pt/round: E4(P4) "Use early history"
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
---------------------------------------------------------------------------------
--370.75 pt/round: E2(P2) "Alternate"
--76.75 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
---------------------------------------------------------------------------------
--368.25396825396825 pt/round: E2(P2) "Alternate"
--77.77777777777777 pt/round: E6(P6) "Collude until betrayed"
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E2(P2) "Alternate"
--250.0 pt/round: E7(P7) "Error"
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-                                                                                
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-                                                                                
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcb
-                            
-
---------------------------------------------------------------------------------
--162.26415094339623 pt/round: E2(P2) "Alternate"
--158.49056603773585 pt/round: Team 0(P8) "The name the team gives to this strategy"
-cbcBcBcbCbCBcbCBCBCbCBCbCBCbCbcbcBcBcBCbcbCBcbcbcbcBcBCbCbCBcbCBCbcBCbCBCBCbcbCB
-BbBcBcBbCbCcBbCcCcCbCcCbCcCbCbBbBcBcBcCbBbCcBbBbBbBcBcCbCbCcBbCcCbBcCbCcCcCbBbCc
-
-cbCbcbCBcbCbcBCBcBcbcBcBcbcbCBcBCbcbCBcbCBCbCbCBcbCbcBCbCbCBcBCBcbCBcbCBCBcbcbC
-BbCbBbCcBbCbBcCcBcBbBcBcBbBbCcBcCbBbCcBbCcCbCbCcBbCbBcCbCbCcBcCcBbCcBbCcCcBbBbC
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E3
---------------------------------------------------------------------------------
-0.0 pt/round: E3(P3) "Collude but retaliate"
-0.0 pt/round: E0(P0) "Collude"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--375.9259259259259 pt/round: E3(P3) "Collude but retaliate"
--73.70370370370371 pt/round: E1(P1) "Betray"
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
-
---------------------------------------------------------------------------------
--198.97435897435898 pt/round: E3(P3) "Collude but retaliate"
--198.97435897435898 pt/round: E2(P2) "Alternate"
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-
---------------------------------------------------------------------------------
-0.0 pt/round: E3(P3) "Collude but retaliate"
-0.0 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--105.35714285714286 pt/round: E3(P3) "Collude but retaliate"
--19.642857142857142 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
-
---------------------------------------------------------------------------------
-0.0 pt/round: E3(P3) "Collude but retaliate"
-0.0 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--250.0 pt/round: E3(P3) "Collude but retaliate"
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccccccc
-                          
-
---------------------------------------------------------------------------------
--169.20731707317074 pt/round: E3(P3) "Collude but retaliate"
--81.40243902439025 pt/round: Team 0(P8) "The name the team gives to this strategy"
-CCCcBCcBcBcbCCCcBCCcBCCcbCcbcbcbCCCCcBcBCCCCcbcBCcBCCcbCcBcbcBcbcBcBCCcBCCcbCCCc
-CCCBcCBcBcBbCCCBcCCBcCCBbCBbBbBbCCCCBcBcCCCCBbBcCBcCCBbCBcBbBcBbBcBcCCBcCCBbCCCB
-
-BcBcbCcbCCcBcBcbCCCCCcbCcBCCCCcBcbCcbCcBcbCCCcBCCCcBCCcbCcbCcbcBCcbCCCCCCcbcbCCC
-cBcBbCBbCCBcBcBbCCCCCBbCBcCCCCBcBbCBbCBcBbCCCBcCCCBcCCBbCBbCBbBcCBbCCCCCCBbBbCCC
-
-cBCc
-BcCB
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E4
---------------------------------------------------------------------------------
-0.0 pt/round: E4(P4) "Use early history"
-0.0 pt/round: E0(P0) "Collude"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--253.0120481927711 pt/round: E4(P4) "Use early history"
--245.78313253012047 pt/round: E1(P1) "Betray"
-cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbb
-bbbbbb
-
---------------------------------------------------------------------------------
--198.69281045751634 pt/round: E4(P4) "Use early history"
--198.69281045751634 pt/round: E2(P2) "Alternate"
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-
---------------------------------------------------------------------------------
-0.0 pt/round: E4(P4) "Use early history"
-0.0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--126.25 pt/round: E4(P4) "Use early history"
--120.25 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
-0.0 pt/round: E4(P4) "Use early history"
-0.0 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--250.0 pt/round: E4(P4) "Use early history"
--250.0 pt/round: E7(P7) "Error"
-cc c                                                                            
-                                                                                
-
-                                                                                
-                                                                                
-
-              
-              
-
---------------------------------------------------------------------------------
--168.859649122807 pt/round: E4(P4) "Use early history"
--158.33333333333334 pt/round: Team 0(P8) "The name the team gives to this strategy"
-CCcbcBCCcbbbbbBCcbbBcBcBCCcBCCcbBCcBCCCcBcBcBCcBcbbBcbbbBCcBcBCcBCCcbBcbBcbBCCcB
-CCBbBcCCBbbbbbcCBbbcBcBcCCBcCCBbcCBcCCCBcBcBcCBcBbbcBbbbcCBcBcCBcCCBbcBbcBbcCCBc
-
-CCCcBCcbbbBCcbBcbbBCcBcbBcBcBcbBCc
-CCCBcCBbbbcCBbcBbbcCBcBbcBcBcBbcCB
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E5
---------------------------------------------------------------------------------
-33.98692810457516 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--169.9346405228758 pt/round: E0(P0) "Collude"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-CCCCCCCCCCCCCCCCCCCCCcccccccccccccccccccccccccccccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--252.01612903225808 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--247.17741935483872 pt/round: E1(P1) "Betray"
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--76.75 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--370.75 pt/round: E2(P2) "Alternate"
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--19.642857142857142 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--105.35714285714286 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
-CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-
---------------------------------------------------------------------------------
--120.25 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--126.25 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--116.66666666666667 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--119.79166666666667 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                                                                
-
---------------------------------------------------------------------------------
--73.84105960264901 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--371.8543046357616 pt/round: Team 0(P8) "The name the team gives to this strategy"
-CcBBbBBbBBBBBbBbbbBBBBBbBBBbBBbbbbbBbBbBbbbBbbbBbbBbBbbbbbBBbBbbbBBbBBBbbbBBbBBB
-CBccbccbcccccbcbbbcccccbcccbccbbbbbcbcbcbbbcbbbcbbcbcbbbbbccbcbbbccbcccbbbccbccc
-
-bbBbBbBBbbbbbBbbbbBBbBBbbBbBbBbbBBBbbbbBBBBBbBBbbBBBbBBBbbbbbBBBBbbBBBB
-bbcbcbccbbbbbcbbbbccbccbbcbcbcbbcccbbbbcccccbccbbcccbcccbbbbbccccbbcccc
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E6
---------------------------------------------------------------------------------
-0.0 pt/round: E6(P6) "Collude until betrayed"
-0.0 pt/round: E0(P0) "Collude"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--251.53374233128835 pt/round: E6(P6) "Collude until betrayed"
--247.85276073619633 pt/round: E1(P1) "Betray"
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbb
-bbb
-
---------------------------------------------------------------------------------
--77.77777777777777 pt/round: E6(P6) "Collude until betrayed"
--368.25396825396825 pt/round: E2(P2) "Alternate"
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
-0.0 pt/round: E6(P6) "Collude until betrayed"
-0.0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
-0.0 pt/round: E6(P6) "Collude until betrayed"
-0.0 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--119.79166666666667 pt/round: E6(P6) "Collude until betrayed"
--116.66666666666667 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E6(P6) "Collude until betrayed"
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccccccccccccc
-                                
-
---------------------------------------------------------------------------------
--67.66467065868264 pt/round: E6(P6) "Collude until betrayed"
--376.6467065868263 pt/round: Team 0(P8) "The name the team gives to this strategy"
-CcBBbBBBBbbBBbbbbBBbBBbBBBbBbBbbbbBBbBBbbbbbbbbbBBbbBbBbbBBbbBBBbbbbBBBbBBBBBbBB
-CBccbccccbbccbbbbccbccbcccbcbcbbbbccbccbbbbbbbbbccbbcbcbbccbbcccbbbbcccbcccccbcc
-
-bBBBbBbbBbbbbbBBbbBBBBbbBbBBbBbbBBBBbbBBBBBBbbbbbbBbBBbBBbbbBBBbBbbBBBBBbbbbBbbB
-bcccbcbbcbbbbbccbbccccbbcbccbcbbccccbbccccccbbbbbbcbccbccbbbcccbcbbcccccbbbbcbbc
-
-BBBbBBB
-cccbccc
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E7
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E0(P0) "Collude"
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                                      
-cccccccccccccccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E1(P1) "Betray"
-                                                                                
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-                                                        
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E2(P2) "Alternate"
-                                                                                
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-                                                                                
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-                            
-cbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E3(P3) "Collude but retaliate"
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                          
-cccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E4(P4) "Use early history"
-                                                                                
-cc c                                                                            
-
-                                                                                
-                                                                                
-
-              
-              
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                                                                                
-cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E6(P6) "Collude until betrayed"
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                                
-cccccccccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: Team 0(P8) "The name the team gives to this strategy"
-                                                                                
-cbbcbbcbbcbcbbbbccccbcbbcbcccbbccbbcccbccccbbcccbcbcbbccbbcbbbcccbcbccccbbcccbbc
-
-                                                                                
-cbcbbcbcccbbcccbbccccbcbccccbcbbccbccbbbcccccccccccbbbcbbccbbbbbcbcbccbbcccbcccb
-
-                  
-bbbbccccbbbccbcbcc
-
---------------------------------------------------------------------------------
+team1--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 1' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team2--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 2' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team3--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 3' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team4--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 4' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team5--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 5' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team6--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 6' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team7--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 7' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team8--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Team 8' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team Team 0
 --------------------------------------------------------------------------------
-48.148148148148145 pt/round: Team 0(P8) "The name the team gives to this strategy"
--240.74074074074073 pt/round: E0(P0) "Collude"
-BBBBBBBBCCBBBBBCCBBBCBCBCBCBCCCCCCBCCBCCCBCCCBCCCBCCBBBCCCCBCCCBBBCCBCCBCBCCBCBB
-ccccccccCCcccccCCcccCcCcCcCcCCCCCCcCCcCCCcCCCcCCCcCCcccCCCCcCCCcccCCcCCcCcCCcCcc
+52.54237288135593 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-262.7118644067797 pt/round: Team 1(P1) "The name the team gives to this strategy"
+BBBCCCBBCBCBBBBCCCBBBBBBCCCBCBCBCCCBCBCCBBCBBBBBCCCCBBBCBBBCBBCBBBBCBCCBBCCBCCCC
+cccCCCccCcCccccCCCccccccCCCcCcCcCCCcCcCCccCcccccCCCCcccCcccCccCccccCcCCccCCcCCCC
 
-BBCBBCCCCCCBCBCBBCCCBCCCBBCCCCBCBBCBBCBBCBBBCCCCCCCCCBCBCBCBBBBCCBBCCCCCBCBCBCCC
-ccCccCCCCCCcCcCccCCCcCCCccCCCCcCccCccCccCcccCCCCCCCCCcCcCcCccccCCccCCCCCcCcCcCCC
-
-BBCBBCCBBBBCBCCCBBBCCBBBBBBBB
-ccCccCCccccCcCCCcccCCcccccccc
+BBBCBCBBBBCCBCCBBCBBBCCCBBCCCCCCCCCCBB
+cccCcCccccCCcCCccCcccCCCccCCCCCCCCCCcc
 
 --------------------------------------------------------------------------------
--372.25274725274727 pt/round: Team 0(P8) "The name the team gives to this strategy"
--78.84615384615384 pt/round: E1(P1) "Betray"
-bbccbcbbbccbbbcccbcccccbcbcbbbccbbccbbcccccbcbbcbbbccbcbbbbccccbcbbbbbbcccccbbbc
-bbBBbBbbbBBbbbBBBbBBBBBbBbBbbbBBbbBBbbBBBBBbBbbBbbbBBbBbbbbBBBBbBbbbbbbBBBBBbbbB
+45.205479452054796 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-226.02739726027397 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCBBBBBCBBBCBBCCCCBCCBBCBCBBBCCCBCBBBBCCCCCBBBCCBCCBBBCCBCBCBCCCCCBCCCBBCBBBBCCB
+CCcccccCcccCccCCCCcCCccCcCcccCCCcCccccCCCCCcccCCcCCcccCCcCcCcCCCCCcCCCccCccccCCc
 
-cbbccbcbbbbbbbbbbccbccbbcccbbccbbbbcbbbcbcbbbcccbccbcccbccccbcbcccbcbcccbbbbccbc
-BbbBBbBbbbbbbbbbbBBbBBbbBBBbbBBbbbbBbbbBbBbbbBBBbBBbBBBbBBBBbBbBBBbBbBBBbbbbBBbB
-
-cbbccbbbccbcbbbbbccccb
-BbbBBbbbBBbBbbbbbBBBBb
+CCCBCCCCBBBCBCCBBBBBBBCBCBCBCCCBCCCCBCCCBCCBBCBCCBCCCCCBCCBCCCCCBB
+CCCcCCCCcccCcCCcccccccCcCcCcCCCcCCCCcCCCcCCccCcCCcCCCCCcCCcCCCCCcc
 
 --------------------------------------------------------------------------------
--158.49056603773585 pt/round: Team 0(P8) "The name the team gives to this strategy"
--162.26415094339623 pt/round: E2(P2) "Alternate"
-BbBcBcBbCbCcBbCcCcCbCcCbCcCbCbBbBcBcBcCbBbCcBbBbBbBcBcCbCbCcBbCcCbBcCbCcCcCbBbCc
-cbcBcBcbCbCBcbCBCBCbCBCbCBCbCbcbcBcBcBCbcbCBcbcbcbcBcBCbCbCBcbCBCbcBCbCBCBCbcbCB
+41.78082191780822 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-208.9041095890411 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CBBCBCCBCCBBBCBBBCBCCBCBCCBBCCCCCCCCBCCCBCCCCBBCBCCCBBBBBBCCCBCBCCCCCCBBCCCBBCBB
+CccCcCCcCCcccCcccCcCCcCcCCccCCCCCCCCcCCCcCCCCccCcCCCccccccCCCcCcCCCCCCccCCCccCcc
 
-BbCbBbCcBbCbBcCcBcBbBcBcBbBbCcBcCbBbCcBbCcCbCbCcBbCbBcCbCbCcBcCcBbCcBbCcCcBbBbC
-cbCbcbCBcbCbcBCBcBcbcBcBcbcbCBcBCbcbCBcbCBCbCbCBcbCbcBCbCbCBcBCBcbCBcbCBCBcbcbC
-
---------------------------------------------------------------------------------
--81.40243902439025 pt/round: Team 0(P8) "The name the team gives to this strategy"
--169.20731707317074 pt/round: E3(P3) "Collude but retaliate"
-CCCBcCBcBcBbCCCBcCCBcCCBbCBbBbBbCCCCBcBcCCCCBbBcCBcCCBbCBcBbBcBbBcBcCCBcCCBbCCCB
-CCCcBCcBcBcbCCCcBCCcBCCcbCcbcbcbCCCCcBcBCCCCcbcBCcBCCcbCcBcbcBcbcBcBCCcBCCcbCCCc
-
-cBcBbCBbCCBcBcBbCCCCCBbCBcCCCCBcBbCBbCBcBbCCCBcCCCBcCCBbCBbCBbBcCBbCCCCCCBbBbCCC
-BcBcbCcbCCcBcBcbCCCCCcbCcBCCCCcBcbCcbCcBcbCCCcBCCCcBCCcbCcbCcbcBCcbCCCCCCcbcbCCC
-
-BcCB
-cBCc
+CCCCBCBCBCCBBCCCBCCBBCCCCBCCCBBCBCBCCCBCBBBCCCBCCCBCCCCBBCBCBBBCBB
+CCCCcCcCcCCccCCCcCCccCCCCcCCCccCcCcCCCcCcccCCCcCCCcCCCCccCcCcccCcc
 
 --------------------------------------------------------------------------------
--158.33333333333334 pt/round: Team 0(P8) "The name the team gives to this strategy"
--168.859649122807 pt/round: E4(P4) "Use early history"
-CCBbBcCCBbbbbbcCBbbcBcBcCCBcCCBbcCBcCCCBcBcBcCBcBbbcBbbbcCBcBcCBcCCBbcBbcBbcCCBc
-CCcbcBCCcbbbbbBCcbbBcBcBCCcBCCcbBCcBCCCcBcBcBCcBcbbBcbbbBCcBcBCcBCCcbBcbBcbBCCcB
+45.876288659793815 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-229.38144329896906 pt/round: Team 4(P4) "The name the team gives to this strategy"
+BCBCBCCBCBBBBBBCBCCCCBBCBCCCCCCBCBCBCBCBBCCCCBCCCBCBBCCCCBCBCBBBCBBBBCBBBBBBBCBC
+cCcCcCCcCccccccCcCCCCccCcCCCCCCcCcCcCcCccCCCCcCCCcCccCCCCcCcCcccCccccCcccccccCcC
 
-CCCBcCBbbbcCBbcBbbcCBcBbcBcBcBbcCB
-CCCcBCcbbbBCcbBcbbBCcBcbBcBcBcbBCc
+CBCBBCCBCCCCCCBBBBBCCBCCCCCCCCBBBBCCBCBCBCBBBBBBCCCCCCCCCCCBCCBCBBCBCBBCBBCCCCCB
+CcCccCCcCCCCCCcccccCCcCCCCCCCCccccCCcCcCcCccccccCCCCCCCCCCCcCCcCccCcCccCccCCCCCc
 
---------------------------------------------------------------------------------
--371.8543046357616 pt/round: Team 0(P8) "The name the team gives to this strategy"
--73.84105960264901 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CBccbccbcccccbcbbbcccccbcccbccbbbbbcbcbcbbbcbbbcbbcbcbbbbbccbcbbbccbcccbbbccbccc
-CcBBbBBbBBBBBbBbbbBBBBBbBBBbBBbbbbbBbBbBbbbBbbbBbbBbBbbbbbBBbBbbbBBbBBBbbbBBbBBB
-
-bbcbcbccbbbbbcbbbbccbccbbcbcbcbbcccbbbbcccccbccbbcccbcccbbbbbccccbbcccc
-bbBbBbBBbbbbbBbbbbBBbBBbbBbBbBbbBBBbbbbBBBBBbBBbbBBBbBBBbbbbbBBBBbbBBBB
+CCBBCBBCBCCCCBCCBBBBBCCBCCBCBCCBCC
+CCccCccCcCCCCcCCcccccCCcCCcCcCCcCC
 
 --------------------------------------------------------------------------------
--376.6467065868263 pt/round: Team 0(P8) "The name the team gives to this strategy"
--67.66467065868264 pt/round: E6(P6) "Collude until betrayed"
-CBccbccccbbccbbbbccbccbcccbcbcbbbbccbccbbbbbbbbbccbbcbcbbccbbcccbbbbcccbcccccbcc
-CcBBbBBBBbbBBbbbbBBbBBbBBBbBbBbbbbBBbBBbbbbbbbbbBBbbBbBbbBBbbBBBbbbbBBBbBBBBBbBB
+44.26229508196721 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-221.31147540983608 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCBBCCCBCCCBBBBBBBCCCCCBCCCBCCBCCCCCCCCCBCCBCBCCBCBBCCBCBBBBBCCBCBBCBCBCCCCCCCCB
+CCccCCCcCCCcccccccCCCCCcCCCcCCcCCCCCCCCCcCCcCcCCcCccCCcCcccccCCcCccCcCcCCCCCCCCc
 
-bcccbcbbcbbbbbccbbccccbbcbccbcbbccccbbccccccbbbbbbcbccbccbbbcccbcbbcccccbbbbcbbc
-bBBBbBbbBbbbbbBBbbBBBBbbBbBBbBbbBBBBbbBBBBBBbbbbbbBbBBbBBbbbBBBbBbbBBBBBbbbbBbbB
-
-cccbccc
-BBBbBBB
+BCCCCBBCBBCBBCBBBBCCBCBCBBBBBCCCBBBCBBCCCC
+cCCCCccCccCccCccccCCcCcCcccccCCCcccCccCCCC
 
 --------------------------------------------------------------------------------
--250.0 pt/round: Team 0(P8) "The name the team gives to this strategy"
--250.0 pt/round: E7(P7) "Error"
-cbbcbbcbbcbcbbbbccccbcbbcbcccbbccbbcccbccccbbcccbcbcbbccbbcbbbcccbcbccccbbcccbbc
-                                                                                
+45.962732919254655 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-229.8136645962733 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCBCCCBCCCBBCCCCBCBBCCBBBBBCBCCCCCBCBCCCBBBBCCBBBBBCCCBBBBCBCBCCBCCBBCCCCCCBBCBC
+CCcCCCcCCCccCCCCcCccCCcccccCcCCCCCcCcCCCccccCCcccccCCCccccCcCcCCcCCccCCCCCCccCcC
 
-cbcbbcbcccbbcccbbccccbcbccccbcbbccbccbbbcccccccccccbbbcbbccbbbbbcbcbccbbcccbcccb
-                                                                                
+CBBBBBBCCCBCBBCCBCCCBCCCCCCBCCBBCCCCCCCCBCCBCCBBCBBCBCCBBCBBCBCBBCCBBBBBBCBBBCCB
+CccccccCCCcCccCCcCCCcCCCCCCcCCccCCCCCCCCcCCcCCccCccCcCCccCccCcCccCCccccccCcccCCc
 
-bbbbccccbbbccbcbcc
-                  
+--------------------------------------------------------------------------------
+52.75590551181102 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-263.7795275590551 pt/round: Team 7(P7) "The name the team gives to this strategy"
+BBCCCCBBCBBCBCBCBCBCBCBCCCBBCBBBCBBCBBCBBCBBBBCBBCBBBBBCBBBCCCBBCBBBCCCBBCCCCBCC
+ccCCCCccCccCcCcCcCcCcCcCCCccCcccCccCccCccCccccCccCcccccCcccCCCccCcccCCCccCCCCcCC
+
+CCBBCCBBBBBCCCCBBCBBCCBCCCBBCCBBBCCBBBCCBCCCCBC
+CCccCCcccccCCCCccCccCCcCCCccCCcccCCcccCCcCCCCcC
+
+--------------------------------------------------------------------------------
+56.89655172413793 pt/round: Team 0(P0) "The name the team gives to this strategy"
+-284.48275862068965 pt/round: Team 8(P8) "The name the team gives to this strategy"
+BBCBCCBBBCBCBBBCBCCCBBCBCBCCBBBCBBCBCBBBCBBBBCCCBBBBBBCBBBBBBCCCBBCBBBCBCBBCCCCB
+ccCcCCcccCcCcccCcCCCccCcCcCCcccCccCcCcccCccccCCCccccccCccccccCCCccCcccCcCccCCCCc
+
+CBBCCCCBCCCCBBCCCCBBCCCBCBBBBBCCBBBB
+CccCCCCcCCCCccCCCCccCCCcCcccccCCcccc
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 1
+--------------------------------------------------------------------------------
+-262.7118644067797 pt/round: Team 1(P1) "The name the team gives to this strategy"
+52.54237288135593 pt/round: Team 0(P0) "The name the team gives to this strategy"
+cccCCCccCcCccccCCCccccccCCCcCcCcCCCcCcCCccCcccccCCCCcccCcccCccCccccCcCCccCCcCCCC
+BBBCCCBBCBCBBBBCCCBBBBBBCCCBCBCBCCCBCBCCBBCBBBBBCCCCBBBCBBBCBBCBBBBCBCCBBCCBCCCC
+
+cccCcCccccCCcCCccCcccCCCccCCCCCCCCCCcc
+BBBCBCBBBBCCBCCBBCBBBCCCBBCCCCCCCCCCBB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 2
+--------------------------------------------------------------------------------
+-226.02739726027397 pt/round: Team 2(P2) "The name the team gives to this strategy"
+45.205479452054796 pt/round: Team 0(P0) "The name the team gives to this strategy"
+CCcccccCcccCccCCCCcCCccCcCcccCCCcCccccCCCCCcccCCcCCcccCCcCcCcCCCCCcCCCccCccccCCc
+CCBBBBBCBBBCBBCCCCBCCBBCBCBBBCCCBCBBBBCCCCCBBBCCBCCBBBCCBCBCBCCCCCBCCCBBCBBBBCCB
+
+CCCcCCCCcccCcCCcccccccCcCcCcCCCcCCCCcCCCcCCccCcCCcCCCCCcCCcCCCCCcc
+CCCBCCCCBBBCBCCBBBBBBBCBCBCBCCCBCCCCBCCCBCCBBCBCCBCCCCCBCCBCCCCCBB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCC
+CCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 3
+--------------------------------------------------------------------------------
+-208.9041095890411 pt/round: Team 3(P3) "The name the team gives to this strategy"
+41.78082191780822 pt/round: Team 0(P0) "The name the team gives to this strategy"
+CccCcCCcCCcccCcccCcCCcCcCCccCCCCCCCCcCCCcCCCCccCcCCCccccccCCCcCcCCCCCCccCCCccCcc
+CBBCBCCBCCBBBCBBBCBCCBCBCCBBCCCCCCCCBCCCBCCCCBBCBCCCBBBBBBCCCBCBCCCCCCBBCCCBBCBB
+
+CCCCcCcCcCCccCCCcCCccCCCCcCCCccCcCcCCCcCcccCCCcCCCcCCCCccCcCcccCcc
+CCCCBCBCBCCBBCCCBCCBBCCCCBCCCBBCBCBCCCBCBBBCCCBCCCBCCCCBBCBCBBBCBB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCC
+CCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCC
+CCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 4
+--------------------------------------------------------------------------------
+-229.38144329896906 pt/round: Team 4(P4) "The name the team gives to this strategy"
+45.876288659793815 pt/round: Team 0(P0) "The name the team gives to this strategy"
+cCcCcCCcCccccccCcCCCCccCcCCCCCCcCcCcCcCccCCCCcCCCcCccCCCCcCcCcccCccccCcccccccCcC
+BCBCBCCBCBBBBBBCBCCCCBBCBCCCCCCBCBCBCBCBBCCCCBCCCBCBBCCCCBCBCBBBCBBBBCBBBBBBBCBC
+
+CcCccCCcCCCCCCcccccCCcCCCCCCCCccccCCcCcCcCccccccCCCCCCCCCCCcCCcCccCcCccCccCCCCCc
+CBCBBCCBCCCCCCBBBBBCCBCCCCCCCCBBBBCCBCBCBCBBBBBBCCCCCCCCCCCBCCBCBBCBCBBCBBCCCCCB
+
+CCccCccCcCCCCcCCcccccCCcCCcCcCCcCC
+CCBBCBBCBCCCCBCCBBBBBCCBCCBCBCCBCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCC
+CCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 5
+--------------------------------------------------------------------------------
+-221.31147540983608 pt/round: Team 5(P5) "The name the team gives to this strategy"
+44.26229508196721 pt/round: Team 0(P0) "The name the team gives to this strategy"
+CCccCCCcCCCcccccccCCCCCcCCCcCCcCCCCCCCCCcCCcCcCCcCccCCcCcccccCCcCccCcCcCCCCCCCCc
+CCBBCCCBCCCBBBBBBBCCCCCBCCCBCCBCCCCCCCCCBCCBCBCCBCBBCCBCBBBBBCCBCBBCBCBCCCCCCCCB
+
+cCCCCccCccCccCccccCCcCcCcccccCCCcccCccCCCC
+BCCCCBBCBBCBBCBBBBCCBCBCBBBBBCCCBBBCBBCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCC
+CCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCC
+CCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 6
+--------------------------------------------------------------------------------
+-229.8136645962733 pt/round: Team 6(P6) "The name the team gives to this strategy"
+45.962732919254655 pt/round: Team 0(P0) "The name the team gives to this strategy"
+CCcCCCcCCCccCCCCcCccCCcccccCcCCCCCcCcCCCccccCCcccccCCCccccCcCcCCcCCccCCCCCCccCcC
+CCBCCCBCCCBBCCCCBCBBCCBBBBBCBCCCCCBCBCCCBBBBCCBBBBBCCCBBBBCBCBCCBCCBBCCCCCCBBCBC
+
+CccccccCCCcCccCCcCCCcCCCCCCcCCccCCCCCCCCcCCcCCccCccCcCCccCccCcCccCCccccccCcccCCc
+CBBBBBBCCCBCBBCCBCCCBCCCCCCBCCBBCCCCCCCCBCCBCCBBCBBCBCCBBCBBCBCBBCCBBBBBBCBBBCCB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCC
+CCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 7
+--------------------------------------------------------------------------------
+-263.7795275590551 pt/round: Team 7(P7) "The name the team gives to this strategy"
+52.75590551181102 pt/round: Team 0(P0) "The name the team gives to this strategy"
+ccCCCCccCccCcCcCcCcCcCcCCCccCcccCccCccCccCccccCccCcccccCcccCCCccCcccCCCccCCCCcCC
+BBCCCCBBCBBCBCBCBCBCBCBCCCBBCBBBCBBCBBCBBCBBBBCBBCBBBBBCBBBCCCBBCBBBCCCBBCCCCBCC
+
+CCccCCcccccCCCCccCccCCcCCCccCCcccCCcccCCcCCCCcC
+CCBBCCBBBBBCCCCBBCBBCCBCCCBBCCBBBCCBBBCCBCCCCBC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Team 8
+--------------------------------------------------------------------------------
+-284.48275862068965 pt/round: Team 8(P8) "The name the team gives to this strategy"
+56.89655172413793 pt/round: Team 0(P0) "The name the team gives to this strategy"
+ccCcCCcccCcCcccCcCCCccCcCcCCcccCccCcCcccCccccCCCccccccCccccccCCCccCcccCcCccCCCCc
+BBCBCCBBBCBCBBBCBCCCBBCBCBCCBBBCBBCBCBBBCBBBBCCCBBBBBBCBBBBBBCCCBBCBBBCBCBBCCCCB
+
+CccCCCCcCCCCccCCCCccCCCcCcccccCCcccc
+CBBCCCCBCCCCBBCCCCBBCCCBCBBBBBCCBBBB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 1(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 2(P2) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 3(P3) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCC
+CCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 4(P4) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 5(P5) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 6(P6) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Team 8(P8) "The name the team gives to this strategy"
+0.0 pt/round: Team 7(P7) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
