@@ -34,9 +34,12 @@ import team5, team6, team7, team8, team9
 import team10, team11, team12, team13, team14, team15
 
 # you can change the list of modules to have different teams play each other
-modules = [#example0, example1, example2, example3, example4, example5, example6, example7,
-team0, team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, 
-team11, team12, team13, team14, team15]
+# first, all the example strategies
+modules = [example0, example1, example2, example3, example4, example5, example6, example7]
+# test your strategy in team0
+modules += [team0] 
+# if you have other people to go against:
+# modules += [team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15]
 for module in modules:
     importlib.reload(module)
     print ('reloaded',module)
@@ -371,5 +374,5 @@ def post_to_file(string, filename='tournament.txt', directory=''):
  
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-    scores, moves, reports = main_play(modules[:9]) # you can decide here how many teams (modules) should play  
+    scores, moves, reports = main_play(modules) # you can decide here how many teams (modules) should play  
     section0, section1, section2, section3 = reports
