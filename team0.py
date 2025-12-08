@@ -6,16 +6,18 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Test Team' # Only 10 chars displayed.
-strategy_name = 'Fill this in with your strategy name'
-strategy_description = 'How does this strategy decide? The default is random!'
+team_name = 'Hedgehog_Emoji_Here' # Only 10 chars displayed.
+strategy_name = 'Rageful Retaliation'
+strategy_description = '''If they collude, I collude. If they betray, then
+                          I betray... for the next twenty rounds. If they betray
+                          again, the twenty-round count resets.'''
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.'''
     
-    import random
-    if (random.randint(0,100) < 50):
+    
+    if 'b' in their_history[-20:-1]:
         return 'b'
     else:
         return 'c'

@@ -6,28 +6,100 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Team 2' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'Nikolai' # Only 10 chars displayed.
+strategy_name = 'Douglas, the Gnome of ...something'
+strategy_description = 'Decides based on gut-feelings and however they\'re feeling that day (probabilities)'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
+    my_score, their_score are ints.'''
     
-    Make my move.
-    Returns 'c' or 'b'. 
-    '''
-
-    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
-    # their_history: a string of the same length as history, possibly empty. 
-    # The first round between these two players is my_history[0] and their_history[0].
-    # The most recent round is my_history[-1] and their_history[-1].
+    import random
     
-    # Analyze my_history and their_history and/or my_score and their_score.
-    # Decide whether to return 'c' or 'b'.
+    #Douglas gets suspicious if the other person does the same thing for the past couple of turns, so they switch their strategy to avoid losing that much 
+    if len(their_history) > 4:
+        if "b" not in their_history[-5]:
+            return "c"
+        else:
+            return "b"
     
-    return 'c'
-
+    if len(my_history) > 0: #Douglas hates betrayals, so they'll betray the other person a bunch of times after Douglas gets betrayed, unless it was just a one time thing and Douglas also betrayed them
+        if my_history[-1] == "c" and their_history[-1] == "b": #Here, Douglas is very mad
+            return "b"
+        elif my_history[-1] == "b" and their_history[-1] == "b":
+            if len(my_history) > 1:
+                if their_history[-2] == "c":
+                    return "c"
+                else:
+                    return "b"
+            else:
+                return "b"
+    
+    if my_score >= 20: #If Douglas is winning by a lot, they'll be excessively confident in themselves, so they'll only betray to get back at the other person
+        return "b"
+    elif my_score <= -150: #If Douglas is losing by a lot, they'll be very sad, so they'll just collude to prevent losing more points
+        return "c"
+    
+    if len(my_history) < 10: #Sometimes, Douglas likes variety
+        if "c" not in my_history:
+            return "c"
+        elif "b" not in my_history:
+            return "b"
+    else:
+        if "c" not in my_history[-10]:
+            return "c"
+        elif "b" not in my_history[-10]:
+            return "b"
+    
+    total_weight = 0
+    betray_weight = 0
+    #Will choose based on a weighted average based on random numbers and historical data; Douglas loves history
+    #Basically, the closer the betray weight is to the total weight, the more likely it is to betray
+    
+    #Firstly, Douglas has to have breakfast, but sometimes, the breakfast isn't that good, and on some days, the breakfast is really, really bad.
+    #If the breakfast is bad, Douglas is more likely to betray, and vise versa
+    day_week = random.randint(1,7)
+    total_weight += 7
+    day_weight = 0
+    if day_week == 1:
+        day_weight = random.randint(0,2)
+    elif day_week == 2:
+        day_weight = random.randint(6,7)
+    elif day_week == 3:
+        day_weight = random.randint(2,5)
+    elif day_week == 4:
+        day_weight = random.randint(1,6)
+    elif day_week == 5:
+        day_weight = random.randint(3,5)
+    elif day_week == 6:
+        day_weight = random.randint(5,6)
+    elif day_week == 7:
+        day_weight = random.randint(1,3)
+    betray_weight += day_weight
+    
+    #Does Douglas have boring paperwork to do? If he does, add one to the betray weight
+    paper_chance = random.randint(1,100)
+    total_weight += 1
+    paper_weight = 0
+    if paper_chance < 90:
+        paper_weight += 1
+    betray_weight += paper_weight
+    
+    #Finally, does Douglas have the time to do their favorite hobby—counting the number of bugs on their mushroom house (the record is two!)
+    #If they don't, add 5 to the betray weight (they're very serious about their hobby)
+    bug_chance = random.randint(1,2)
+    total_weight += 5
+    bug_weight = 0
+    if bug_chance == 1:
+        bug_weight += 5
+    betray_weight += bug_weight
+    
+    #Betray calculations; Douglas is okay at math
+    betray_ratio =  betray_weight/total_weight
+    if random.random() > betray_ratio:
+        return "c"
+    else:
+        return "b"
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)

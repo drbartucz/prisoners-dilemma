@@ -35,9 +35,9 @@ import team10, team11, team12, team13, team14, team15
 
 # you can change the list of modules to have different teams play each other
 # first, all the example strategies
-modules = [example0, example1, example2, example3, example4, example5, example6, example7]
+# modules = [example0, example1, example2, example3, example4, example5, example6, example7]
 # test your strategy in team0
-modules += [team0] 
+modules = [team0, team1, team2, team3, team4, team5, team6, team7, team8] 
 # if you have other people to go against:
 # modules += [team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15]
 for module in modules:

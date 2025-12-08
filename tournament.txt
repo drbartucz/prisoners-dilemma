@@ -1,316 +1,58 @@
 --------------------------------------------------------------------------------
 Section 0 - Line up
 --------------------------------------------------------------------------------
-Player 0 (P0): E0, Collude
-        Always collude.
-Player 1 (P1): E1, Betray
-        Always betray.
-Player 2 (P2): E2, Alternate
-        Collude, then alternate.
-Player 3 (P3): E3, Collude but retaliate
-        Collude first round. Collude, except in a round after getting 
-        a severe punishment.
-Player 4 (P4): E4, Use early history
-        Collude first round. Compare all rounds to the previous round and 
-        assume opponent will behave the same as the first time the previous 
-        round's result occurred. If the previous round's result never has 
-        happened, collude except after being severly punished.
-Player 5 (P5): E5, Collude first 100 rounds unless betrayed. Betray 101st round forward.
-        Betray if ever betrayed.
-        If I haven't been betrayed yet, I'll betray starting with the 100th roun
-        d.
-Player 6 (P6): E6, Collude until betrayed
-        Collude first round. Collude, unless betrayed; then always betray.
-Player 7 (P7): E7, Error
-        return '', ' ', or int 4
-Player 8 (P8): Test Team, Fill this in with your strategy name
+Player 0 (P0): Hedgehog_Emoji_Here, Rageful Retaliation
+        If they collude, I collude. If they betray, then
+                                  I betray... for the next twenty rounds. If the
+        y betray
+                                  again, the twenty-round count resets.
+Player 1 (P1): Quinn, Copy
+        Do whatever your opponnet did last
+Player 2 (P2): Nikolai, Douglas, the Gnome of ...something
+        Decides based on gut-feelings and however they're feeling that day (prob
+        abilities)
+Player 3 (P3): E-Team, Alternate
+        Alternates between colluding and betraying every turn.
+Player 4 (P4): Carson H, Modified Pavlov
+        Collude unless losing, then betray; betray on last round.
+Player 5 (P5): Salmon, Turnabout is fair play
+        Returns the other player's previous decision
+Player 6 (P6): Jessica, :)
+        No mercy after betrayal
+Player 7 (P7): Emily, a_good_strategy
+        betray if betrayed, always betray if alternating
+Player 8 (P8): Tyler team, Copycat
         How does this strategy decide? The default is random!
 --------------------------------------------------------------------------------
 Section 1 - Player vs. Player
 --------------------------------------------------------------------------------
 Each column shows pts/round earned against each other player:
              P0     P1     P2     P3     P4     P5     P6     P7     P8
-vs. P0 :    0.0  100.0   49.7    0.0    0.0   15.1    0.0 -250.0   46.1
-vs. P1 : -500.0    0.0 -375.0 -375.0 -254.0 -252.4 -252.3 -250.0 -389.8
-vs. P2 : -248.6  -75.0    0.0 -200.6 -198.3  -78.0  -76.0 -250.0 -169.8
-vs. P3 :    0.0  -75.0 -197.2    0.0    0.0  -32.4    0.0 -250.0  -81.8
-vs. P4 :    0.0 -244.4 -198.3    0.0    0.0 -112.0    0.0 -250.0 -168.2
-vs. P5 :  -75.6 -246.6 -367.8 -167.6 -118.4    0.0   -7.3 -250.0 -390.4
-vs. P6 :    0.0 -246.8 -370.9    0.0    0.0   -1.5    0.0 -250.0 -371.7
-vs. P7 : -250.0 -250.0 -250.0 -250.0 -250.0 -250.0 -250.0    0.0 -250.0
-vs. P8 : -230.4  -54.2 -163.2 -190.9 -177.0  -51.9  -78.3 -250.0    0.0
-TOTAL  :-1304.6-1092.0-1872.7-1184.1 -997.7 -763.0 -663.8-2000.0-1775.7
+vs. P0 :    0.0    0.0 -250.3 -369.4    0.0    0.0    0.0    0.0    0.0
+vs. P1 :    0.0    0.0 -172.3 -197.0    0.0    0.0    0.0    0.0    0.0
+vs. P2 : -243.0 -176.6    0.0 -198.1 -243.3  -10.9 -243.2  -69.6 -175.9
+vs. P3 :  -78.0 -203.0 -201.9    0.0  -76.4 -252.4  -76.5  -88.6 -201.9
+vs. P4 :    0.0    0.0 -251.0 -373.1    0.0    0.0    0.0    0.0    0.0
+vs. P5 :    0.0    0.0    2.2   50.5    0.0    0.0    0.0    0.0    0.0
+vs. P6 :    0.0    0.0 -251.0 -372.9    0.0    0.0    0.0    0.0    0.0
+vs. P7 :    0.0    0.0  -66.4 -356.9    0.0    0.0    0.0    0.0    0.0
+vs. P8 :    0.0    0.0 -172.3 -198.1    0.0    0.0    0.0    0.0    0.0
+TOTAL  : -321.0 -379.6-1362.9-2015.2 -319.6 -263.3 -319.7 -158.2 -377.8
 --------------------------------------------------------------------------------
 Section 2 - Leaderboard
 --------------------------------------------------------------------------------
 Average points per round:
 Team name (P#):  Score      with strategy name
-E6        (P6):      -73.8 points with Collude until betrayed                  
-E5        (P5):      -84.8 points with Collude first 100 rounds unless betrayed
-E4        (P4):     -110.9 points with Use early history                       
-E1        (P1):     -121.3 points with Betray                                  
-E3        (P3):     -131.6 points with Collude but retaliate                   
-E0        (P0):     -145.0 points with Collude                                 
-Test Team (P8):     -197.3 points with Fill this in with your strategy name    
-E2        (P2):     -208.1 points with Alternate                               
-E7        (P7):     -222.2 points with Error                                   
+Emily     (P7):      -17.6 points with a_good_strategy                         
+Salmon    (P5):      -29.3 points with Turnabout is fair play                  
+Hedgehog_E(P0):      -35.7 points with Rageful Retaliation                     
+Carson H  (P4):      -35.5 points with Modified Pavlov                         
+Jessica   (P6):      -35.5 points with :)                                      
+Tyler team(P8):      -42.0 points with Copycat                                 
+Quinn     (P1):      -42.2 points with Copy                                    
+Nikolai   (P2):     -151.4 points with Douglas, the Gnome of ...something      
+E-Team    (P3):     -223.9 points with Alternate                               
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-example0--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E0'
-strategy_name = 'Collude'
-strategy_description = 'Always collude.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    # This player always colludes.
-    return 'c'
-    --------------------------------------------------------------------------------
-example1--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E1'
-strategy_name = 'Betray'
-strategy_description = 'Always betray.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    #This example player always betrays.      
-    return 'b'
---------------------------------------------------------------------------------
-example2--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E2'
-strategy_name = 'Alternate'
-strategy_description = 'Collude, then alternate.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    # This player colludes on even numbered rounds (first round is round #0).
-    if len(my_history)%2 == 0:
-        return 'c'
-    else:
-        return 'b'
-    --------------------------------------------------------------------------------
-example3--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E3'
-strategy_name = 'Collude but retaliate'
-strategy_description = '''\
-Collude first round. Collude, except in a round after getting 
-a severe punishment.'''
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    if len(my_history)==0: # It's the first round; collude.
-        return 'c'
-    elif my_history[-1]=='c' and their_history[-1]=='b':
-        return 'b' # Betray if they were severely punished last time,
-    else:
-        return 'c' # otherwise collude.--------------------------------------------------------------------------------
-example4--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E4'
-strategy_name = 'Use early history'
-strategy_description = '''\
-Collude first round. Compare all rounds to the previous round and 
-assume opponent will behave the same as the first time the previous 
-round's result occurred. If the previous round's result never has 
-happened, collude except after being severly punished.'''
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    if len(my_history)==0: # It's the first round: collude
-        return 'c'
-    else:
-        # If there was a previous round just like the last one,
-        # do whatever they did in the round that followed it
-        
-        # Reference last round
-        recent_round_them = their_history[-1]
-        recent_round_me = my_history[-1]
-                    
-        # Look at rounds before that one
-        for round in range(len(my_history)-1):
-            prior_round_them = their_history[round]
-            prior_round_me = my_history[round]
-            # If one matches
-            if (prior_round_me == recent_round_me) and \
-                    (prior_round_them == recent_round_them):
-                return their_history[round]
-        # No match found
-        if my_history[-1]=='c' and their_history[-1]=='b':
-            return 'b' # Betray if they were severely punished last time
-        else:
-            return 'c' # Otherwise collude.--------------------------------------------------------------------------------
-example5--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E5'
-strategy_name = 'Collude first 100 rounds unless betrayed. Betray 101st round forward.'
-strategy_description = '''\
-Betray if ever betrayed.
-If I haven't been betrayed yet, I'll betray starting with the 100th round.
-'''
-
-import random
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    # If the other player has betrayed or this is the last half of the game, 
-    if 'b' in their_history or len(their_history)>100: 
-        return 'b'               # Betray.
-    else:
-        return 'c'         # but 90% of the time collude
-    
-    
-    --------------------------------------------------------------------------------
-example6--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E6'
-strategy_name = 'Collude until betrayed'
-strategy_description = '''\
-Collude first round. Collude, unless betrayed; then always betray.'''
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    if 'b' in their_history:
-        return 'b'
-    else:
-        return 'c'--------------------------------------------------------------------------------
-example7--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E7'
-strategy_name = 'Error'
-strategy_description = 'return \'\', \' \', or int 4'
-import random
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    #This example player always betrays.      
-    return random.choice(['', ' ', 4])
 --------------------------------------------------------------------------------
 team0--------------------------------------------------------------------------------
 ####
@@ -321,16 +63,18 @@ team0---------------------------------------------------------------------------
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Test Team' # Only 10 chars displayed.
-strategy_name = 'Fill this in with your strategy name'
-strategy_description = 'How does this strategy decide? The default is random!'
+team_name = 'Hedgehog_Emoji_Here' # Only 10 chars displayed.
+strategy_name = 'Rageful Retaliation'
+strategy_description = '''If they collude, I collude. If they betray, then
+                          I betray... for the next twenty rounds. If they betray
+                          again, the twenty-round count resets.'''
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.'''
     
-    import random
-    if (random.randint(0,100) < 50):
+    
+    if 'b' in their_history[-20:-1]:
         return 'b'
     else:
         return 'c'
@@ -374,523 +118,847 @@ if __name__ == '__main__':
               their_score=0,
               result='b')             
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team E0
---------------------------------------------------------------------------------
--500.0 pt/round: E0(P0) "Collude"
-100.0 pt/round: E1(P1) "Betray"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+team1--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
 
-ccccccccccccccccccccccccccccccccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-
---------------------------------------------------------------------------------
--248.57142857142858 pt/round: E0(P0) "Collude"
-49.714285714285715 pt/round: E2(P2) "Alternate"
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-
-CcCcCcCcCcCcCcC
-CBCBCBCBCBCBCBC
-
---------------------------------------------------------------------------------
-0.0 pt/round: E0(P0) "Collude"
-0.0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
-0.0 pt/round: E0(P0) "Collude"
-0.0 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--75.63025210084034 pt/round: E0(P0) "Collude"
-15.126050420168067 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCcccccccccccccccccc
-CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBB
-
---------------------------------------------------------------------------------
-0.0 pt/round: E0(P0) "Collude"
-0.0 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--250.0 pt/round: E0(P0) "Collude"
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-ccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                   
-
---------------------------------------------------------------------------------
--230.36649214659687 pt/round: E0(P0) "Collude"
-46.07329842931937 pt/round: Test Team(P8) "Fill this in with your strategy name"
-ccCCcccCcCcCcCCCCCCcCCCccCCccCCccCcCCcCcCccCcCCCCCcCcCcCccCcCCCcCCcCcCCcCCCcccCc
-BBCCBBBCBCBCBCCCCCCBCCCBBCCBBCCBBCBCCBCBCBBCBCCCCCBCBCBCBBCBCCCBCCBCBCCBCCCBBBCB
-
-CCCcccccCCcCcCCcCccCCcccCCCcCcCCCCccccCcCCccCCcCcCcCcCCCccCccCCCCccCcCcccccCcccc
-CCCBBBBBCCBCBCCBCBBCCBBBCCCBCBCCCCBBBBCBCCBBCCBCBCBCBCCCBBCBBCCCCBBCBCBBBBBCBBBB
-
-CcCCCccCCCccCCCCCcCcCCccCCccCCC
-CBCCCBBCCCBBCCCCCBCBCCBBCCBBCCC
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E1
---------------------------------------------------------------------------------
-100.0 pt/round: E1(P1) "Betray"
--500.0 pt/round: E0(P0) "Collude"
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-ccccccccccccccccccccccccccccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--75.0 pt/round: E1(P1) "Betray"
--375.0 pt/round: E2(P2) "Alternate"
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--75.0 pt/round: E1(P1) "Betray"
--375.0 pt/round: E3(P3) "Collude but retaliate"
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--244.3548387096774 pt/round: E1(P1) "Betray"
--254.03225806451613 pt/round: E4(P4) "Use early history"
-BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--246.60194174757282 pt/round: E1(P1) "Betray"
--252.4271844660194 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--246.75925925925927 pt/round: E1(P1) "Betray"
--252.3148148148148 pt/round: E6(P6) "Collude until betrayed"
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E1(P1) "Betray"
--250.0 pt/round: E7(P7) "Error"
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                                                                
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                                                                
-
-bbb
+team_name = 'Quinn' # Only 10 chars displayed.
+strategy_name = 'Copy'
+strategy_description = 'Do whatever your opponnet did last'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+    import random
+    if len(my_history)==0: # It's the first round; collude.
+        return 'c'
+    elif their_history[-1]=='b':
+        return 'b'
+    else:
+        return 'c'
+            
    
+    
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team2--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Nikolai' # Only 10 chars displayed.
+strategy_name = 'Douglas, the Gnome of ...something'
+strategy_description = 'Decides based on gut-feelings and however they\'re feeling that day (probabilities)'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+    
+    import random
+    
+    #Douglas gets suspicious if the other person does the same thing for the past couple of turns, so they switch their strategy to avoid losing that much 
+    if len(their_history) > 4:
+        if "b" not in their_history[-5]:
+            return "c"
+        else:
+            return "b"
+    
+    if len(my_history) > 0: #Douglas hates betrayals, so they'll betray the other person a bunch of times after Douglas gets betrayed, unless it was just a one time thing and Douglas also betrayed them
+        if my_history[-1] == "c" and their_history[-1] == "b": #Here, Douglas is very mad
+            return "b"
+        elif my_history[-1] == "b" and their_history[-1] == "b":
+            if len(my_history) > 1:
+                if their_history[-2] == "c":
+                    return "c"
+                else:
+                    return "b"
+            else:
+                return "b"
+    
+    if my_score >= 20: #If Douglas is winning by a lot, they'll be excessively confident in themselves, so they'll only betray to get back at the other person
+        return "b"
+    elif my_score <= -150: #If Douglas is losing by a lot, they'll be very sad, so they'll just collude to prevent losing more points
+        return "c"
+    
+    if len(my_history) < 10: #Sometimes, Douglas likes variety
+        if "c" not in my_history:
+            return "c"
+        elif "b" not in my_history:
+            return "b"
+    else:
+        if "c" not in my_history[-10]:
+            return "c"
+        elif "b" not in my_history[-10]:
+            return "b"
+    
+    total_weight = 0
+    betray_weight = 0
+    #Will choose based on a weighted average based on random numbers and historical data; Douglas loves history
+    #Basically, the closer the betray weight is to the total weight, the more likely it is to betray
+    
+    #Firstly, Douglas has to have breakfast, but sometimes, the breakfast isn't that good, and on some days, the breakfast is really, really bad.
+    #If the breakfast is bad, Douglas is more likely to betray, and vise versa
+    day_week = random.randint(1,7)
+    total_weight += 7
+    day_weight = 0
+    if day_week == 1:
+        day_weight = random.randint(0,2)
+    elif day_week == 2:
+        day_weight = random.randint(6,7)
+    elif day_week == 3:
+        day_weight = random.randint(2,5)
+    elif day_week == 4:
+        day_weight = random.randint(1,6)
+    elif day_week == 5:
+        day_weight = random.randint(3,5)
+    elif day_week == 6:
+        day_weight = random.randint(5,6)
+    elif day_week == 7:
+        day_weight = random.randint(1,3)
+    betray_weight += day_weight
+    
+    #Does Douglas have boring paperwork to do? If he does, add one to the betray weight
+    paper_chance = random.randint(1,100)
+    total_weight += 1
+    paper_weight = 0
+    if paper_chance < 90:
+        paper_weight += 1
+    betray_weight += paper_weight
+    
+    #Finally, does Douglas have the time to do their favorite hobby—counting the number of bugs on their mushroom house (the record is two!)
+    #If they don't, add 5 to the betray weight (they're very serious about their hobby)
+    bug_chance = random.randint(1,2)
+    total_weight += 5
+    bug_weight = 0
+    if bug_chance == 1:
+        bug_weight += 5
+    betray_weight += bug_weight
+    
+    #Betray calculations; Douglas is okay at math
+    betray_ratio =  betray_weight/total_weight
+    if random.random() > betray_ratio:
+        return "c"
+    else:
+        return "b"
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+--------------------------------------------------------------------------------
+team3--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'E-Team' # Only 10 chars displayed.
+strategy_name = 'Alternate'
+strategy_description = 'Alternates between colluding and betraying every turn.'
+
+
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+    
+    #import random
+    if len(their_history) % 2 == 0:
+        return 'b'
+    else:
+        return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             --------------------------------------------------------------------------------
+team4--------------------------------------------------------------------------------
+team_name = 'Carson H'
+strategy_name = 'Modified Pavlov'
+strategy_description = 'Collude unless losing, then betray; betray on last round.'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+
+    #Modified Pavlov Strat:
+    last_score = 0
+    if last_score > my_score or my_score < 0 or len(my_history) == 199:
+        move = 'b'
+    else:
+        move = 'c'
+    last_score = my_score
+    return move    --------------------------------------------------------------------------------
+team5--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Salmon' # Only 10 chars displayed.
+strategy_name = 'Turnabout is fair play'
+strategy_description = 'Returns the other player\'s previous decision'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+    
+    return "c"
+    '''if len(my_history) == 0:
+        return "c"
+    else:
+        return their_history[-1]'''
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Collude on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='c'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    x = test_move(my_history='cbc',
+              their_history='bcb', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')
+    print(x)--------------------------------------------------------------------------------
+team6--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Jessica' # Only 10 chars displayed.
+strategy_name = ':)'
+strategy_description = 'No mercy after betrayal'
+   
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+   
+    import random
+    if ('b' in their_history):
+        return 'b'
+    else:
+        return 'c'
+
+   
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='ccc',
+              their_history='cbc',
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc',
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0,
+              their_score=0,
+              result='b')             --------------------------------------------------------------------------------
+team7--------------------------------------------------------------------------------
+team_name = 'Emily' # Only 10 chars displayed.
+strategy_name = 'a_good_strategy'
+strategy_description = 'betray if betrayed, always betray if alternating'
+
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+
+    import random
+    if len(my_history)==0: 
+        return "c"
+    else:
+        revenge = False
+        alternate = True
+        for i in range(1, len(their_history)):
+            if their_history[i] == their_history[i-1]:
+                alternate = False
+        if alternate == True and len(their_history) > 10:
+            revenge = True
+        elif my_history[-1] =='c' and their_history[-1] =='b':
+            revenge = True
+       
+    if revenge == True:
+        return 'b'
+    if revenge == False:
+        return 'c'--------------------------------------------------------------------------------
+team8--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Tyler team' # Only 10 chars displayed.
+strategy_name = 'Copycat'
+strategy_description = 'How does this strategy decide? The default is random!'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.'''
+    
+    if(len(their_history) == 0):
+        return "c"
+    return their_history[-1] #Copies last thing oppenent does
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')   --------------------------------------------------------------------------------
+Section 3 - Game Data for Team Hedgehog_Emoji_Here
+--------------------------------------------------------------------------------
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+0.0 pt/round: Quinn(P1) "Copy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--54.23728813559322 pt/round: E1(P1) "Betray"
--389.8305084745763 pt/round: Test Team(P8) "Fill this in with your strategy name"
-bBbBbBbBBBbbBBBBBbbbbbBBbbBBbBBBbBBbBbBBBbBbBbbBBBBBBbBbBBBBBBBbbbbbBBbbBBBBBBBb
-bcbcbcbcccbbcccccbbbbbccbbccbcccbccbcbcccbcbcbbccccccbcbcccccccbbbbbccbbcccccccb
+-242.9878048780488 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+-250.3048780487805 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CccbBBBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CBBbccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bBbbBBBbbbBBBbBBbbbbBBbBBBbBBBBbBBBbbBBbBBBbbBbbBbBbbbbBbBBBbbBBBBBbBBbBbBbbbbbb
-bcbbcccbbbcccbccbbbbccbcccbccccbcccbbccbcccbbcbbcbcbbbbcbcccbbcccccbccbcbcbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbBBbbBBbBBbBB
-bbbbbccbbccbccbcc
+bbbb
+bbbb
+
+--------------------------------------------------------------------------------
+-78.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+-369.42857142857144 pt/round: E-Team(P3) "Alternate"
+cCbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+BCbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+bBbBbBbBbBbBbBb
+bcbcbcbcbcbcbcb
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+0.0 pt/round: Jessica(P6) ":)"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+0.0 pt/round: Emily(P7) "a_good_strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+0.0 pt/round: Tyler team(P8) "Copycat"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team E2
+Section 3 - Game Data for Team Quinn
 --------------------------------------------------------------------------------
-49.714285714285715 pt/round: E2(P2) "Alternate"
--248.57142857142858 pt/round: E0(P0) "Collude"
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
+0.0 pt/round: Quinn(P1) "Copy"
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-
-CBCBCBCBCBCBCBC
-CcCcCcCcCcCcCcC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--375.0 pt/round: E2(P2) "Alternate"
--75.0 pt/round: E1(P1) "Betray"
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+-176.59574468085106 pt/round: Quinn(P1) "Copy"
+-172.3404255319149 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCc
+CBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCB
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+bBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcb
+bcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBb
 
 --------------------------------------------------------------------------------
--197.19101123595505 pt/round: E2(P2) "Alternate"
--200.56179775280899 pt/round: E3(P3) "Collude but retaliate"
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+-202.97029702970298 pt/round: Quinn(P1) "Copy"
+-197.02970297029702 pt/round: E-Team(P3) "Alternate"
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+
+cBcBcBcBcBcBcBcBcBcBc
+BcBcBcBcBcBcBcBcBcBcB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Quinn(P1) "Copy"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Quinn(P1) "Copy"
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Quinn(P1) "Copy"
+0.0 pt/round: Jessica(P6) ":)"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Quinn(P1) "Copy"
+0.0 pt/round: Emily(P7) "a_good_strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Quinn(P1) "Copy"
+0.0 pt/round: Tyler team(P8) "Copycat"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Nikolai
+--------------------------------------------------------------------------------
+-250.3048780487805 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-242.9878048780488 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+CBBbccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CccbBBBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbb
+bbbb
+
+--------------------------------------------------------------------------------
+-172.3404255319149 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-176.59574468085106 pt/round: Quinn(P1) "Copy"
+CBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCB
+CcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCc
+
+bcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBb
+bBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcb
+
+--------------------------------------------------------------------------------
+-201.86335403726707 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-198.13664596273293 pt/round: E-Team(P3) "Alternate"
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
-cBcBcBcBcBcBcBcBcB
-BcBcBcBcBcBcBcBcBc
+--------------------------------------------------------------------------------
+-250.96153846153845 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-243.26923076923077 pt/round: Carson H(P4) "Modified Pavlov"
+CBbcbccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CcbBbBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--198.2905982905983 pt/round: E2(P2) "Alternate"
--198.2905982905983 pt/round: E4(P4) "Use early history"
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+2.185792349726776 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-10.92896174863388 pt/round: Salmon(P5) "Turnabout is fair play"
+CBBBBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CccccCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
---------------------------------------------------------------------------------
--367.79661016949154 pt/round: E2(P2) "Alternate"
--77.96610169491525 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
---------------------------------------------------------------------------------
--370.9039548022599 pt/round: E2(P2) "Alternate"
--75.98870056497175 pt/round: E6(P6) "Collude until betrayed"
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbc
-BbBbBbBbBbBbBbBbB
-
---------------------------------------------------------------------------------
--250.0 pt/round: E2(P2) "Alternate"
--250.0 pt/round: E7(P7) "Error"
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-                                                                                
-
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-                                                                             
-
---------------------------------------------------------------------------------
--163.1868131868132 pt/round: E2(P2) "Alternate"
--169.78021978021977 pt/round: Test Team(P8) "Fill this in with your strategy name"
-cBcBcBcbcBcbcbCBCBCBCBcbCBcBCbcBcBCbcBcbCbCBcbCBcbCbcbCBcbCbcbcBcBcBCbCbcbCBcBcb
-BcBcBcBbBcBbBbCcCcCcCcBbCcBcCbBcBcCbBcBbCbCcBbCcBbCbBbCcBbCbBbBcBcBcCbCbBbCcBcBb
-
-cBCbcBcBcbcbCbCbcBCbCBcbcbcBCbCBCBcBCBcbCBcBcbcbcBcbcBCBCbCBCBcBCbCBcBcbCBcBcbcB
-BcCbBcBcBbBbCbCbBcCbCcBbBbBcCbCcCcBcCcBbCcBcBbBbBcBbBcCcCbCcCcBcCbCcBcBbCcBcBbBc
-
-cBCBcbcBCBCBCBCBCbcBCB
-BcCcBbBcCcCcCcCcCbBcCc
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E3
---------------------------------------------------------------------------------
-0.0 pt/round: E3(P3) "Collude but retaliate"
-0.0 pt/round: E0(P0) "Collude"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--375.0 pt/round: E3(P3) "Collude but retaliate"
--75.0 pt/round: E1(P1) "Betray"
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+-250.97402597402598 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-243.1818181818182 pt/round: Jessica(P6) ":)"
+CBbcbccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CcbBbBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
--200.56179775280899 pt/round: E3(P3) "Collude but retaliate"
--197.19101123595505 pt/round: E2(P2) "Alternate"
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+-66.4021164021164 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-69.57671957671958 pt/round: Emily(P7) "a_good_strategy"
+CBbCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCB
+CcbCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCc
+
+cCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcC
+BCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBC
+
+CCCBcCCCCBcCCCCBcCCCCBcCCCCBc
+CCCcBCCCCcBCCCCcBCCCCcBCCCCcB
+
+--------------------------------------------------------------------------------
+-172.2560975609756 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+-175.91463414634146 pt/round: Tyler team(P8) "Copycat"
+CBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCB
+CcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCc
+
+bcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbc
+bBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbB
+
+BcCB
+cBCc
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team E-Team
+--------------------------------------------------------------------------------
+-369.42857142857144 pt/round: E-Team(P3) "Alternate"
+-78.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+BCbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+cCbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+
+bcbcbcbcbcbcbcb
+bBbBbBbBbBbBbBb
+
+--------------------------------------------------------------------------------
+-197.02970297029702 pt/round: E-Team(P3) "Alternate"
+-202.97029702970298 pt/round: Quinn(P1) "Copy"
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+
+BcBcBcBcBcBcBcBcBcBcB
+cBcBcBcBcBcBcBcBcBcBc
+
+--------------------------------------------------------------------------------
+-198.13664596273293 pt/round: E-Team(P3) "Alternate"
+-201.86335403726707 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
-BcBcBcBcBcBcBcBcBc
-cBcBcBcBcBcBcBcBcB
+--------------------------------------------------------------------------------
+-373.0978260869565 pt/round: E-Team(P3) "Alternate"
+-76.3586956521739 pt/round: Carson H(P4) "Modified Pavlov"
+Bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+cBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+
+bcbcbcbcbcbcbcbcbcbcbcbc
+bBbBbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
-0.0 pt/round: E3(P3) "Collude but retaliate"
-0.0 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+50.476190476190474 pt/round: E-Team(P3) "Alternate"
+-252.38095238095238 pt/round: Salmon(P5) "Turnabout is fair play"
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+cCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCC
+BCBCBCBCBCBCBCBCBCBCBCBCB
+cCcCcCcCcCcCcCcCcCcCcCcCc
 
 --------------------------------------------------------------------------------
--167.58241758241758 pt/round: E3(P3) "Collude but retaliate"
--32.417582417582416 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+-372.89156626506025 pt/round: E-Team(P3) "Alternate"
+-76.50602409638554 pt/round: Jessica(P6) ":)"
+Bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+cBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
-CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
-bcbcbcbcbcbcbcbcbcbcbc
-bBbBbBbBbBbBbBbBbBbBbB
-
---------------------------------------------------------------------------------
-0.0 pt/round: E3(P3) "Collude but retaliate"
-0.0 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+bcbcbc
+bBbBbB
 
 --------------------------------------------------------------------------------
--250.0 pt/round: E3(P3) "Collude but retaliate"
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
+-356.9105691056911 pt/round: E-Team(P3) "Alternate"
+-88.6178861788618 pt/round: Emily(P7) "a_good_strategy"
+BcBcBcBcBcBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+cBcBcBcBcBcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                   
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
 --------------------------------------------------------------------------------
--190.9090909090909 pt/round: E3(P3) "Collude but retaliate"
--81.81818181818181 pt/round: Test Team(P8) "Fill this in with your strategy name"
-CCCcBcbcbCcBcBcbcbCCcbCcBcbCCcBcbCcBcBCcbCCCCCCCcBcBcBCCCCCcbCcbCcbCCCCcbCcBcBcb
-CCCBcBbBbCBcBcBbBbCCBbCBcBbCCBcBbCBcBcCBbCCCCCCCBcBcBcCCCCCBbCBbCBbCCCCBbCBcBcBb
+-198.13664596273293 pt/round: E-Team(P3) "Alternate"
+-201.86335403726707 pt/round: Tyler team(P8) "Copycat"
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
-CcBcbcBCcbCcBcbCcbCCcbcbCCCCcBcBcbCcbCcbCCcbCcBCCcbC
-CBcBbBcCBbCBcBbCBbCCBbBbCCCCBcBcBbCBbCBbCCBbCBcCCBbC
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team E4
+Section 3 - Game Data for Team Carson H
 --------------------------------------------------------------------------------
-0.0 pt/round: E4(P4) "Use early history"
-0.0 pt/round: E0(P0) "Collude"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--254.03225806451613 pt/round: E4(P4) "Use early history"
--244.3548387096774 pt/round: E1(P1) "Betray"
-cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--198.2905982905983 pt/round: E4(P4) "Use early history"
--198.2905982905983 pt/round: E2(P2) "Alternate"
-CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
-
---------------------------------------------------------------------------------
-0.0 pt/round: E4(P4) "Use early history"
-0.0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--118.35106382978724 pt/round: E4(P4) "Use early history"
--111.96808510638297 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
-0.0 pt/round: E4(P4) "Use early history"
-0.0 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
---------------------------------------------------------------------------------
--250.0 pt/round: E4(P4) "Use early history"
--250.0 pt/round: E7(P7) "Error"
-cc c                                                                            
-                                                                                
-
-                                                   
-                                                   
-
---------------------------------------------------------------------------------
--177.007299270073 pt/round: E4(P4) "Use early history"
--168.24817518248176 pt/round: Test Team(P8) "Fill this in with your strategy name"
-cbcbBCCCCcBcbBCCCcBCcbbbbBcBcbbbbbbbBCCcBcBcBCCcBCcBcBcbBCCcbbbBCCCcbBcbbBCcbbBc
-BbBbcCCCCBcBbcCCCBcCBbbbbcBcBbbbbbbbcCCBcBcBcCCBcCBcBcBbcCCBbbbcCCCBbcBbbcCBbbcB
-
-bbBCcbbBCCcBcBcbbbBCCcbBCcbBCcBCCcbBcbbbbBCCcbbbbbbBcbbBc
-bbcCBbbcCCBcBcBbbbcCCBbcCBbcCBcCCBbcBbbbbcCCBbbbbbbcBbbcB
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E5
---------------------------------------------------------------------------------
-15.126050420168067 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--75.63025210084034 pt/round: E0(P0) "Collude"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBB
-CCCCCCCCCCCCCCCCCCCCCcccccccccccccccccc
-
---------------------------------------------------------------------------------
--252.4271844660194 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--246.60194174757282 pt/round: E1(P1) "Betray"
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--77.96610169491525 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--367.79661016949154 pt/round: E2(P2) "Alternate"
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
---------------------------------------------------------------------------------
--32.417582417582416 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--167.58241758241758 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
-CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-
-bBbBbBbBbBbBbBbBbBbBbB
-bcbcbcbcbcbcbcbcbcbcbc
-
---------------------------------------------------------------------------------
--111.96808510638297 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--118.35106382978724 pt/round: E4(P4) "Use early history"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--1.4563106796116505 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--7.281553398058253 pt/round: E6(P6) "Collude until betrayed"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCCCCBb
-CCCCCCCCCCCCCCCCCCCCCcb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
-
-cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                                                       
-
---------------------------------------------------------------------------------
--51.92307692307692 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
--390.38461538461536 pt/round: Test Team(P8) "Fill this in with your strategy name"
-cbbbBBBBBBBbBbbbBbbbBBBBbBbbbBbbBBBBBbbBBbBBbbbBBBbbBbbbBBbBBbBBBbBBbbBbBBBBbbBB
-Bbbbcccccccbcbbbcbbbccccbcbbbcbbcccccbbccbccbbbcccbbcbbbccbccbcccbccbbcbccccbbcc
-
-bbBbbbbBbBBbBBBBbBBBbbBbbbbbBBBBbBBbBbbBBBbBBBBBBBBBbbbBBBBbBbbBbbbbBBBBBBBB
-bbcbbbbcbccbccccbcccbbcbbbbbccccbccbcbbcccbcccccccccbbbccccbcbbcbbbbcccccccc
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E6
---------------------------------------------------------------------------------
-0.0 pt/round: E6(P6) "Collude until betrayed"
-0.0 pt/round: E0(P0) "Collude"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+0.0 pt/round: Quinn(P1) "Copy"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
@@ -898,41 +966,248 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--252.3148148148148 pt/round: E6(P6) "Collude until betrayed"
--246.75925925925927 pt/round: E1(P1) "Betray"
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+-243.26923076923077 pt/round: Carson H(P4) "Modified Pavlov"
+-250.96153846153845 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CcbBbBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CBbcbccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--75.98870056497175 pt/round: E6(P6) "Collude until betrayed"
--370.9039548022599 pt/round: E2(P2) "Alternate"
-CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBbBbB
-cbcbcbcbcbcbcbcbc
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
-0.0 pt/round: E6(P6) "Collude until betrayed"
-0.0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+-76.3586956521739 pt/round: Carson H(P4) "Modified Pavlov"
+-373.0978260869565 pt/round: E-Team(P3) "Alternate"
+cBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+Bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+bBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbc
 
 --------------------------------------------------------------------------------
-0.0 pt/round: E6(P6) "Collude until betrayed"
-0.0 pt/round: E4(P4) "Use early history"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCC
+CCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+0.0 pt/round: Jessica(P6) ":)"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCC
+CCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+0.0 pt/round: Emily(P7) "a_good_strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCC
+CCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+0.0 pt/round: Tyler team(P8) "Copycat"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Salmon
+--------------------------------------------------------------------------------
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+0.0 pt/round: Quinn(P1) "Copy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-10.92896174863388 pt/round: Salmon(P5) "Turnabout is fair play"
+2.185792349726776 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CccccCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CBBBBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-252.38095238095238 pt/round: Salmon(P5) "Turnabout is fair play"
+50.476190476190474 pt/round: E-Team(P3) "Alternate"
+cCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcC
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+cCcCcCcCcCcCcCcCcCcCcCcCc
+BCBCBCBCBCBCBCBCBCBCBCBCB
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCC
+CCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+0.0 pt/round: Jessica(P6) ":)"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+0.0 pt/round: Emily(P7) "a_good_strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+0.0 pt/round: Tyler team(P8) "Copycat"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Jessica
+--------------------------------------------------------------------------------
+0.0 pt/round: Jessica(P6) ":)"
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Jessica(P6) ":)"
+0.0 pt/round: Quinn(P1) "Copy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-243.1818181818182 pt/round: Jessica(P6) ":)"
+-250.97402597402598 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CcbBbBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CBbcbccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-76.50602409638554 pt/round: Jessica(P6) ":)"
+-372.89156626506025 pt/round: E-Team(P3) "Alternate"
+cBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+Bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+bBbBbB
+bcbcbc
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Jessica(P6) ":)"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCC
+CCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Jessica(P6) ":)"
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Jessica(P6) ":)"
+0.0 pt/round: Emily(P7) "a_good_strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Jessica(P6) ":)"
+0.0 pt/round: Tyler team(P8) "Copycat"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Emily
+--------------------------------------------------------------------------------
+0.0 pt/round: Emily(P7) "a_good_strategy"
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
@@ -943,198 +1218,150 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--7.281553398058253 pt/round: E6(P6) "Collude until betrayed"
--1.4563106796116505 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+0.0 pt/round: Emily(P7) "a_good_strategy"
+0.0 pt/round: Quinn(P1) "Copy"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCcb
-CCCCCCCCCCCCCCCCCCCCCBb
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--250.0 pt/round: E6(P6) "Collude until betrayed"
--250.0 pt/round: E7(P7) "Error"
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                                
+-69.57671957671958 pt/round: Emily(P7) "a_good_strategy"
+-66.4021164021164 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CcbCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCc
+CBbCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCB
 
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-                                                                     
+BCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBCCCCcBC
+cCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcCCCCBcC
 
---------------------------------------------------------------------------------
--78.26086956521739 pt/round: E6(P6) "Collude until betrayed"
--371.7391304347826 pt/round: Test Team(P8) "Fill this in with your strategy name"
-cbBBbbBBbbBBbbBBBbBBBBbBBBBBBbbBbBbBbbbbbBBbBBBbBBBBBbbbbbbBBbBbbbBBBbbBbbbBbbBb
-Bbccbbccbbccbbcccbccccbccccccbbcbcbcbbbbbccbcccbcccccbbbbbbccbcbbbcccbbcbbbcbbcb
-
-BbBBBbBbbBBBbBBBbbbbBBbbbbbBbbbBBbbBBbbBbBBbbBbbBbBBBbBbBbBbBbBbBbbBbBbbbBbbBbBb
-cbcccbcbbcccbcccbbbbccbbbbbcbbbccbbccbbcbccbbcbbcbcccbcbcbcbcbcbcbbcbcbbbcbbcbcb
-
-bBbBBbbBBbBBBbBBBbbBbbbB
-bcbccbbccbcccbcccbbcbbbc
+CCCcBCCCCcBCCCCcBCCCCcBCCCCcB
+CCCBcCCCCBcCCCCBcCCCCBcCCCCBc
 
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Section 3 - Game Data for Team E7
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E0(P0) "Collude"
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+-88.6178861788618 pt/round: Emily(P7) "a_good_strategy"
+-356.9105691056911 pt/round: E-Team(P3) "Alternate"
+cBcBcBcBcBcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+BcBcBcBcBcBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
-                                                   
-ccccccccccccccccccccccccccccccccccccccccccccccccccc
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
 --------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E1(P1) "Betray"
-                                                                                
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+0.0 pt/round: Emily(P7) "a_good_strategy"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-                                                                                
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-   
-bbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E2(P2) "Alternate"
-                                                                                
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-                                                                             
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+CCCCCCCCCCC
+CCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E3(P3) "Collude but retaliate"
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+0.0 pt/round: Emily(P7) "a_good_strategy"
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-                                                                   
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E4(P4) "Use early history"
-                                                                                
-cc c                                                                            
-
-                                                   
-                                                   
+CCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+0.0 pt/round: Emily(P7) "a_good_strategy"
+0.0 pt/round: Jessica(P6) ":)"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-                                                       
-cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-
---------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: E6(P6) "Collude until betrayed"
-                                                                                
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-                                                                     
-ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--250.0 pt/round: E7(P7) "Error"
--250.0 pt/round: Test Team(P8) "Fill this in with your strategy name"
-                                                                                
-cbbbbcbbbbcccccbcccbbccbbcccbbbcbbbbbbcbcbbbbcccbbcbcbcbcbbbbcbbbbbcbcccbcbcccbc
+0.0 pt/round: Emily(P7) "a_good_strategy"
+0.0 pt/round: Tyler team(P8) "Copycat"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-                                         
-bbbcbbcbccbcbcbbbbbcccccbcbbbbccbbcccbcbb
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team Test Team
+Section 3 - Game Data for Team Tyler team
 --------------------------------------------------------------------------------
-46.07329842931937 pt/round: Test Team(P8) "Fill this in with your strategy name"
--230.36649214659687 pt/round: E0(P0) "Collude"
-BBCCBBBCBCBCBCCCCCCBCCCBBCCBBCCBBCBCCBCBCBBCBCCCCCBCBCBCBBCBCCCBCCBCBCCBCCCBBBCB
-ccCCcccCcCcCcCCCCCCcCCCccCCccCCccCcCCcCcCccCcCCCCCcCcCcCccCcCCCcCCcCcCCcCCCcccCc
+0.0 pt/round: Tyler team(P8) "Copycat"
+0.0 pt/round: Hedgehog_Emoji_Here(P0) "Rageful Retaliation"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCBBBBBCCBCBCCBCBBCCBBBCCCBCBCCCCBBBBCBCCBBCCBCBCBCBCCCBBCBBCCCCBBCBCBBBBBCBBBB
-CCCcccccCCcCcCCcCccCCcccCCCcCcCCCCccccCcCCccCCcCcCcCcCCCccCccCCCCccCcCcccccCcccc
-
-CBCCCBBCCCBBCCCCCBCBCCBBCCBBCCC
-CcCCCccCCCccCCCCCcCcCCccCCccCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--389.8305084745763 pt/round: Test Team(P8) "Fill this in with your strategy name"
--54.23728813559322 pt/round: E1(P1) "Betray"
-bcbcbcbcccbbcccccbbbbbccbbccbcccbccbcbcccbcbcbbccccccbcbcccccccbbbbbccbbcccccccb
-bBbBbBbBBBbbBBBBBbbbbbBBbbBBbBBBbBBbBbBBBbBbBbbBBBBBBbBbBBBBBBBbbbbbBBbbBBBBBBBb
+0.0 pt/round: Tyler team(P8) "Copycat"
+0.0 pt/round: Quinn(P1) "Copy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-bcbbcccbbbcccbccbbbbccbcccbccccbcccbbccbcccbbcbbcbcbbbbcbcccbbcccccbccbcbcbbbbbb
-bBbbBBBbbbBBBbBBbbbbBBbBBBbBBBBbBBBbbBBbBBBbbBbbBbBbbbbBbBBBbbBBBBBbBBbBbBbbbbbb
-
-bbbbbccbbccbccbcc
-bbbbbBBbbBBbBBbBB
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--169.78021978021977 pt/round: Test Team(P8) "Fill this in with your strategy name"
--163.1868131868132 pt/round: E2(P2) "Alternate"
-BcBcBcBbBcBbBbCcCcCcCcBbCcBcCbBcBcCbBcBbCbCcBbCcBbCbBbCcBbCbBbBcBcBcCbCbBbCcBcBb
-cBcBcBcbcBcbcbCBCBCBCBcbCBcBCbcBcBCbcBcbCbCBcbCBcbCbcbCBcbCbcbcBcBcBCbCbcbCBcBcb
+-175.91463414634146 pt/round: Tyler team(P8) "Copycat"
+-172.2560975609756 pt/round: Nikolai(P2) "Douglas, the Gnome of ...something"
+CcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCc
+CBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCB
 
-BcCbBcBcBbBbCbCbBcCbCcBbBbBcCbCcCcBcCcBbCcBcBbBbBcBbBcCcCbCcCcBcCbCcBcBbCcBcBbBc
-cBCbcBcBcbcbCbCbcBCbCBcbcbcBCbCBCBcBCBcbCBcBcbcbcBcbcBCBCbCBCBcBCbCBcBcbCBcBcbcB
+bBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbBcBCcbB
+bcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbcBcCBbc
 
-BcCcBbBcCcCcCcCcCbBcCc
-cBCBcbcBCBCBCBCBCbcBCB
-
---------------------------------------------------------------------------------
--81.81818181818181 pt/round: Test Team(P8) "Fill this in with your strategy name"
--190.9090909090909 pt/round: E3(P3) "Collude but retaliate"
-CCCBcBbBbCBcBcBbBbCCBbCBcBbCCBcBbCBcBcCBbCCCCCCCBcBcBcCCCCCBbCBbCBbCCCCBbCBcBcBb
-CCCcBcbcbCcBcBcbcbCCcbCcBcbCCcBcbCcBcBCcbCCCCCCCcBcBcBCCCCCcbCcbCcbCCCCcbCcBcBcb
-
-CBcBbBcCBbCBcBbCBbCCBbBbCCCCBcBcBbCBbCBbCCBbCBcCCBbC
-CcBcbcBCcbCcBcbCcbCCcbcbCCCCcBcBcbCcbCcbCCcbCcBCCcbC
+cBCc
+BcCB
 
 --------------------------------------------------------------------------------
--168.24817518248176 pt/round: Test Team(P8) "Fill this in with your strategy name"
--177.007299270073 pt/round: E4(P4) "Use early history"
-BbBbcCCCCBcBbcCCCBcCBbbbbcBcBbbbbbbbcCCBcBcBcCCBcCBcBcBbcCCBbbbcCCCBbcBbbcCBbbcB
-cbcbBCCCCcBcbBCCCcBCcbbbbBcBcbbbbbbbBCCcBcBcBCCcBCcBcBcbBCCcbbbBCCCcbBcbbBCcbbBc
+-201.86335403726707 pt/round: Tyler team(P8) "Copycat"
+-198.13664596273293 pt/round: E-Team(P3) "Alternate"
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
-bbcCBbbcCCBcBcBbbbcCCBbcCBbcCBcCCBbcBbbbbcCCBbbbbbbcBbbcB
-bbBCcbbBCCcBcBcbbbBCCcbBCcbBCcBCCcbBcbbbbBCCcbbbbbbBcbbBc
-
---------------------------------------------------------------------------------
--390.38461538461536 pt/round: Test Team(P8) "Fill this in with your strategy name"
--51.92307692307692 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
-Bbbbcccccccbcbbbcbbbccccbcbbbcbbcccccbbccbccbbbcccbbcbbbccbccbcccbccbbcbccccbbcc
-cbbbBBBBBBBbBbbbBbbbBBBBbBbbbBbbBBBBBbbBBbBBbbbBBBbbBbbbBBbBBbBBBbBBbbBbBBBBbbBB
-
-bbcbbbbcbccbccccbcccbbcbbbbbccccbccbcbbcccbcccccccccbbbccccbcbbcbbbbcccccccc
-bbBbbbbBbBBbBBBBbBBBbbBbbbbbBBBBbBBbBbbBBBbBBBBBBBBBbbbBBBBbBbbBbbbbBBBBBBBB
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
 --------------------------------------------------------------------------------
--371.7391304347826 pt/round: Test Team(P8) "Fill this in with your strategy name"
--78.26086956521739 pt/round: E6(P6) "Collude until betrayed"
-Bbccbbccbbccbbcccbccccbccccccbbcbcbcbbbbbccbcccbcccccbbbbbbccbcbbbcccbbcbbbcbbcb
-cbBBbbBBbbBBbbBBBbBBBBbBBBBBBbbBbBbBbbbbbBBbBBBbBBBBBbbbbbbBBbBbbbBBBbbBbbbBbbBb
+0.0 pt/round: Tyler team(P8) "Copycat"
+0.0 pt/round: Carson H(P4) "Modified Pavlov"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-cbcccbcbbcccbcccbbbbccbbbbbcbbbccbbccbbcbccbbcbbcbcccbcbcbcbcbcbcbbcbcbbbcbbcbcb
-BbBBBbBbbBBBbBBBbbbbBBbbbbbBbbbBBbbBBbbBbBBbbBbbBbBBBbBbBbBbBbBbBbbBbBbbbBbbBbBb
-
-bcbccbbccbcccbcccbbcbbbc
-bBbBBbbBBbBBBbBBBbbBbbbB
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--250.0 pt/round: Test Team(P8) "Fill this in with your strategy name"
--250.0 pt/round: E7(P7) "Error"
-cbbbbcbbbbcccccbcccbbccbbcccbbbcbbbbbbcbcbbbbcccbbcbcbcbcbbbbcbbbbbcbcccbcbcccbc
-                                                                                
+0.0 pt/round: Tyler team(P8) "Copycat"
+0.0 pt/round: Salmon(P5) "Turnabout is fair play"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-bbbcbbcbccbcbcbbbbbcccccbcbbbbccbbcccbcbb
-                                         
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Tyler team(P8) "Copycat"
+0.0 pt/round: Jessica(P6) ":)"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+0.0 pt/round: Tyler team(P8) "Copycat"
+0.0 pt/round: Emily(P7) "a_good_strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
