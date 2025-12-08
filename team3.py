@@ -6,21 +6,15 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'E-Team' # Only 10 chars displayed.
-strategy_name = 'Alternate'
-strategy_description = 'Alternates between colluding and betraying every turn.'
+team_name = 'WaltrWhite' # Only 10 chars displayed.
+strategy_name = 'just a chemistry teacher'
+strategy_description = 'Chemistry is the study of change.'
 
 
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.'''
-    
-    #import random
-    if len(their_history) % 2 == 0:
-        return 'b'
-    else:
-        return 'c'
-
+    return 'c'
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -58,4 +52,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b') 

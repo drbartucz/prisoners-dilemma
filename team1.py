@@ -7,20 +7,26 @@
 ####
 
 team_name = 'Quinn' # Only 10 chars displayed.
-strategy_name = 'Copy'
+strategy_name = 'Modified Copy'
 strategy_description = 'Do whatever your opponnet did last'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.'''
     import random
+    x=0
     if len(my_history)==0: # It's the first round; collude.
         return 'c'
     elif their_history[-1]=='b':
-        return 'b'
+        if x>50:
+            return 'b'
+        else:
+            x+=1
+            return 'c'
     else:
+        x+=1
         return 'c'
-            
+          
    
     
     
@@ -60,4 +66,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')  

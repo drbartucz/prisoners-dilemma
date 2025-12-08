@@ -16,9 +16,11 @@ def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.'''
     
+    import random
     
     if 'b' in their_history[-20:-1]:
-        return 'b'
+        if random.randint(1, 100) < 6:
+            return 'b'
     else:
         return 'c'
 
@@ -59,4 +61,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')

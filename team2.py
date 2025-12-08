@@ -19,26 +19,26 @@ def move(my_history, their_history, my_score, their_score):
     #Douglas gets suspicious if the other person does the same thing for the past couple of turns, so they switch their strategy to avoid losing that much 
     if len(their_history) > 4:
         if "b" not in their_history[-5]:
-            return "c"
-        else:
             return "b"
+        else:
+            return "c"
     
     if len(my_history) > 0: #Douglas hates betrayals, so they'll betray the other person a bunch of times after Douglas gets betrayed, unless it was just a one time thing and Douglas also betrayed them
         if my_history[-1] == "c" and their_history[-1] == "b": #Here, Douglas is very mad
-            return "b"
+            return "c"
         elif my_history[-1] == "b" and their_history[-1] == "b":
             if len(my_history) > 1:
                 if their_history[-2] == "c":
-                    return "c"
-                else:
                     return "b"
+                else:
+                    return "c"
             else:
-                return "b"
+                return "c"
     
     if my_score >= 20: #If Douglas is winning by a lot, they'll be excessively confident in themselves, so they'll only betray to get back at the other person
-        return "b"
-    elif my_score <= -150: #If Douglas is losing by a lot, they'll be very sad, so they'll just collude to prevent losing more points
         return "c"
+    elif my_score <= -150: #If Douglas is losing by a lot, they'll be very sad, so they'll just collude to prevent losing more points
+        return "b"
     
     if len(my_history) < 10: #Sometimes, Douglas likes variety
         if "c" not in my_history:
@@ -137,4 +137,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')

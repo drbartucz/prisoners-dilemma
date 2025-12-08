@@ -1,7 +1,7 @@
 team_name = 'Emily' # Only 10 chars displayed.
 strategy_name = 'a_good_strategy'
 strategy_description = 'betray if betrayed, always betray if alternating'
-
+    
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.'''
@@ -9,6 +9,7 @@ def move(my_history, their_history, my_score, their_score):
     import random
     if len(my_history)==0: 
         return "c"
+
     else:
         revenge = False
         alternate = True
@@ -19,6 +20,9 @@ def move(my_history, their_history, my_score, their_score):
             revenge = True
         elif my_history[-1] =='c' and their_history[-1] =='b':
             revenge = True
+        elif their_history[-1] == 'c':
+            revenge = False 
+        
        
     if revenge == True:
         return 'b'

@@ -7,10 +7,15 @@ def move(my_history, their_history, my_score, their_score):
     my_score, their_score are ints.'''
 
     #Modified Pavlov Strat:
-    last_score = 0
-    if last_score > my_score or my_score < 0 or len(my_history) == 199:
-        move = 'b'
+    alternate = True
+    for i in range(1, len(their_history)):
+        if their_history[i] == their_history[i-1]:
+            alternate = False
+    if len(their_history) == 0 or their_history[-1] == 'c':
+        return 'c'
+    elif alternate == True or 'b' in their_history[-20:-1]:
+        return 'b'
     else:
-        move = 'c'
-    last_score = my_score
-    return move    
+        return 'b'
+    
+    '''const winner = yay!!'''
