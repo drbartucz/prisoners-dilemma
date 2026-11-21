@@ -1,5 +1,5 @@
 # the tournament output
-tournament.txt
+results.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -208,3 +208,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Previous classes' entries: kept locally, not published
+archive/
