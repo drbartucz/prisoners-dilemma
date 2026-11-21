@@ -17,14 +17,14 @@ How many years in prison you get depends on what you *both* chose:
 
 |                    | They collude                          | They betray                           |
 |--------------------|---------------------------------------|---------------------------------------|
-| **You collude**    | You both get **1 year**               | You get **5 years**, they get 0       |
-| **You betray**     | You get **0 years**, they get 5       | You both get **3 years**              |
+| **You collude**    | You both get **10 years**             | You get **50 years**, they get 0      |
+| **You betray**     | You get **0 years**, they get 50      | You both get **30 years**             |
 
 Fewer years is better. (Yes, it is a harsh sentence. They were very good cookies.)
 
 That is the dilemma: whatever your partner does, you personally do better by
-betraying (0 years instead of 1, or 3 years instead of 5). But if you both
-think that way you both get 3 years, when you could both have had 1.
+betraying (0 years instead of 10, or 30 years instead of 50). But if you both
+think that way you both get 30 years, when you could both have had 10.
 
 ## The tournament
 
@@ -80,7 +80,7 @@ common mistake: `their_history[-1]` (their last move) crashes in round one
 because there is no last move yet. Check `len(their_history) == 0` first.
 
 If your code crashes, or returns anything other than `'c'` or `'b'`, that round
-counts as colluding **and** you get 5 years for it.
+counts as colluding **and** you get 50 years for it.
 
 The `examples` folder has nine small strategies you can read for ideas.
 

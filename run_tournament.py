@@ -37,12 +37,12 @@ from pathlib import Path
 # Settings you might want to change
 # ----------------------------------------------------------------------------
 # Years in prison for one round - FEWER is better.
-BOTH_COLLUDE = 1        # 'c' vs 'c'  - you both stay quiet
+BOTH_COLLUDE = 10       # 'c' vs 'c'  - you both stay quiet
 I_BETRAY = 0            # 'b' vs 'c'  - you betray someone who trusted you
-I_AM_BETRAYED = 5       # 'c' vs 'b'  - you trusted someone who betrayed you
-BOTH_BETRAY = 3         # 'b' vs 'b'  - you betray each other
+I_AM_BETRAYED = 50      # 'c' vs 'b'  - you trusted someone who betrayed you
+BOTH_BETRAY = 30        # 'b' vs 'b'  - you betray each other
 # A move that crashes, or isn't 'c' or 'b', counts as 'c' AND costs this:
-BAD_MOVE = 5
+BAD_MOVE = 50
 
 # Each pair of players meets this many times, so luck matters less.
 GAMES_PER_PAIR = 3
