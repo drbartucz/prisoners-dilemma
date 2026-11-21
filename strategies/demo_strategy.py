@@ -4,7 +4,7 @@
 #
 #  To enter the tournament:
 #
-#    1. Change team_name below to your name or your team's name.
+#    1. Change strategy_name below to your name or your team's name.
 #    2. Replace the code inside move() with your own strategy.
 #    3. Rename this file to anything else ending in .py
 #       (for example:  maria_and_sam.py).
@@ -19,7 +19,7 @@
 
 import random
 
-team_name = 'Demo Strategy'
+strategy_name = 'Demo Strategy'
 
 
 def move(my_history, their_history, my_score, their_score):
@@ -65,7 +65,7 @@ def move(my_history, their_history, my_score, their_score):
 # -----------------------------------------------------------------------------
 if __name__ == '__main__':
     situations = [('', ''), ('c', 'c'), ('c', 'b'), ('ccc', 'cbb'), ('bbbb', 'cccc')]
-    print('Testing', team_name)
+    print('Testing', strategy_name)
     for mine, theirs in situations:
         result = move(mine, theirs, 0, 0)
         print('  I played', repr(mine), 'and they played', repr(theirs),
