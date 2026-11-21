@@ -2,11 +2,11 @@
 
 You are going to write a small Python strategy for a famous game, and then every
 strategy in the class plays every other strategy. Whoever spends the least time
-in prison wins.
+in prison wins a duck. In fact, the strategies of the top THREE people will win ducks.
 
 ## The game
 
-Someone has stolen Mr. Bartucz's chocolate chip cookies. You and your partner
+Someone has stolen Mr. Bartucz's favorite chocolate chip cookies. You and your partner
 have been caught with crumbs on your shirts. You are questioned in separate
 rooms and cannot talk to each other. Each of you has two choices:
 
@@ -33,11 +33,11 @@ One round would be a pure guess. So instead you play the same opponent
 that has happened so far in that game. Now your opponent can punish you for
 betraying or reward you for colluding, and you can do the same to them.
 
-- You play three games against every other strategy.
+- You play a three 100-200-round matches against every other strategy.
 - Nobody knows exactly how many rounds a game will last.
 - Your score is your average years in prison per round, over all your games.
   **The lowest score wins.**
-- You are **not** trying to beat each opponent. You are trying to get the
+- HINT: You are **not** trying to beat each opponent. You are trying to get the
   fewest years for yourself across the whole tournament. Those are not the
   same thing!
 
@@ -89,7 +89,7 @@ The `examples` folder has nine small strategies you can read for ideas.
 Run your own file to see what it does in a few made-up situations:
 
 ```
-python strategies/maria_and_sam.py
+python strategies/maria.py
 ```
 
 Then run a practice tournament against the demo and all the examples:
@@ -109,7 +109,8 @@ classmates, who may have very different ideas.
 ## Rules
 
 - Your strategy may only use the four things `move()` is given. It may not read
-  or change other files, other strategies, or the tournament program.
+  or change other files, other strategies, or the tournament program. Mr. B will
+  run a fresh, read-only tournament file, so this won't work anyway. 
 - `import random` is fine. Don't use anything that needs to be installed.
 - Keep it quick: no waiting, no asking for input, no loops that never end.
   A file that runs for more than five seconds in the pre-start check is left out.
