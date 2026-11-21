@@ -46,7 +46,7 @@ betraying or reward you for colluding, and you can do the same to them.
 1. Download this project: on GitHub click the green **Code** button, then
    **Download ZIP**, and unzip it.
 2. Open `strategies/demo_strategy.py`. Everything you need is in that one file.
-3. Change `team_name = 'Demo Strategy'` to your name or team name.
+3. Change `strategy_name = 'Demo Strategy'` to your name or team name.
 4. Replace the code inside `move()` with your own idea.
 5. Rename the file to something else ending in `.py`, such as `maria_and_sam.py`.
 6. Upload that one file to the assignment.
@@ -54,7 +54,7 @@ betraying or reward you for colluding, and you can do the same to them.
 You must change **both** the name inside the file and the name of the file.
 A renamed file that still says `'Demo Strategy'`, or a file still called
 `demo_strategy.py` with a new name inside, will not be allowed to play. Two
-entries with the same `team_name` will not be allowed to play either.
+entries with the same `strategy_name` will not be allowed to play either.
 
 ## Writing your strategy
 
@@ -140,7 +140,7 @@ them to is fine. Then:
 | `python run_tournament.py some_folder`     | Plays the strategies in any other folder                 |
 
 - Files with problems (syntax errors, endless loops, missing or duplicate
-  `team_name`, the demo name/filename rule) are listed before the start and left out. Fix them
+  `strategy_name`, the demo name/filename rule) are listed before the start and left out. Fix them
   and run again, or press Enter to play without them.
 - `results.txt` is rewritten as the tournament runs and holds the leaderboard,
   a head-to-head table and every game round by round. It is overwritten each

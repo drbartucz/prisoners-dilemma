@@ -12,7 +12,7 @@ Run this file to play every strategy against every other strategy:
 Every .py file in the folder is one player, whatever the file is called.
 Each file needs:
 
-    team_name = 'Something unique'
+    strategy_name = 'Something unique'
     def move(my_history, their_history, my_score, their_score):  # returns 'c' or 'b'
 
 The standings update on screen after every game and are saved to results.txt.
@@ -157,17 +157,17 @@ def load_strategies(folders, skip_demo=False):
                 where, describe_error(error))))
             continue
 
-        name = getattr(module, 'team_name', None)
+        name = getattr(module, 'strategy_name', None)
         move = getattr(module, 'move', None)
         if not isinstance(name, str) or not name.strip():
-            problems.append((label, "needs a line like  team_name = 'Your Name'"))
+            problems.append((label, "needs a line like  strategy_name = 'Your Name'"))
             continue
         if not callable(move):
             problems.append((label, 'needs a function called move()'))
             continue
         name = ' '.join(name.split())
         if len(name) > MAX_NAME_LENGTH:
-            warnings.append((label, 'team_name is long, so it was cut to "{}"'.format(
+            warnings.append((label, 'strategy_name is long, so it was cut to "{}"'.format(
                 name[:MAX_NAME_LENGTH])))
             name = name[:MAX_NAME_LENGTH].strip()
         players.append(Player(name, label, move, source))
@@ -178,13 +178,13 @@ def load_strategies(folders, skip_demo=False):
         is_demo_file = Path(player.file).name.casefold() == DEMO_FILENAME
         is_demo_name = simplify(player.name) == simplify(DEMO_NAME)
         if is_demo_file and not is_demo_name:
-            problems.append((player.file, 'team_name was changed to "{}" but the file is still '
+            problems.append((player.file, 'strategy_name was changed to "{}" but the file is still '
                              'called {} - rename the file'.format(player.name, DEMO_FILENAME)))
         elif is_demo_file and skip_demo:
             pass                        # the demo sits out the real tournament
         elif is_demo_name and not is_demo_file:
-            problems.append((player.file, 'the file was renamed but team_name is still '
-                             '"{}" - change team_name'.format(player.name)))
+            problems.append((player.file, 'the file was renamed but strategy_name is still '
+                             '"{}" - change strategy_name'.format(player.name)))
         else:
             kept.append(player)
 
@@ -197,7 +197,7 @@ def load_strategies(folders, skip_demo=False):
         if len(group) > 1:
             for player in group:
                 others = ', '.join(p.file for p in group if p is not player)
-                problems.append((player.file, 'team_name "{}" is also used by {} - names must '
+                problems.append((player.file, 'strategy_name "{}" is also used by {} - names must '
                                  'be different'.format(player.name, others)))
         else:
             players.append(group[0])
@@ -222,7 +222,7 @@ def load_strategies(folders, skip_demo=False):
 
 def strip_name_line(source):
     lines = [line.strip() for line in source.splitlines()]
-    return [line for line in lines if line and not line.startswith('team_name')]
+    return [line for line in lines if line and not line.startswith('strategy_name')]
 
 
 # ----------------------------------------------------------------------------

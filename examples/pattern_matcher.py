@@ -1,7 +1,7 @@
 # An example strategy. Read it for ideas, but write your own in the
 # "strategies" folder (start from strategies/demo_strategy.py).
 
-team_name = 'Pattern Matcher'
+strategy_name = 'Pattern Matcher'
 
 # Looks for an earlier round that went the same way as the last round, and plays what the other player did in that earlier round. If there is none, it colludes unless it was just betrayed.
 

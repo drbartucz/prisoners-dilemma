@@ -1,7 +1,7 @@
 # An example strategy. Read it for ideas, but write your own in the
 # "strategies" folder (start from strategies/demo_strategy.py).
 
-team_name = 'Mostly Nice'
+strategy_name = 'Mostly Nice'
 
 # Betrays if betrayed in the last 10 rounds. Otherwise colludes 90% of the time and betrays 10% of the time, at random.
 

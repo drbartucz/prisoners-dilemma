@@ -1,7 +1,7 @@
 # An example strategy. Read it for ideas, but write your own in the
 # "strategies" folder (start from strategies/demo_strategy.py).
 
-team_name = 'Late Betrayer'
+strategy_name = 'Late Betrayer'
 
 # Like Grudge Holder, but also starts betraying after 100 rounds no matter what.
 

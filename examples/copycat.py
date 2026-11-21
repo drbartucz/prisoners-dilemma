@@ -1,7 +1,7 @@
 # An example strategy. Read it for ideas, but write your own in the
 # "strategies" folder (start from strategies/demo_strategy.py).
 
-team_name = 'Copycat'
+strategy_name = 'Copycat'
 
 # Colludes in the first round, then copies whatever the other player did last round. (Game theorists call this one Tit for Tat.)
 

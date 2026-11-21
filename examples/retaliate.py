@@ -1,7 +1,7 @@
 # An example strategy. Read it for ideas, but write your own in the
 # "strategies" folder (start from strategies/demo_strategy.py).
 
-team_name = 'Retaliate'
+strategy_name = 'Retaliate'
 
 # Colludes, except in the round right after it colluded and got betrayed.
 

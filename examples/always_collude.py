@@ -1,7 +1,7 @@
 # An example strategy. Read it for ideas, but write your own in the
 # "strategies" folder (start from strategies/demo_strategy.py).
 
-team_name = 'Always Collude'
+strategy_name = 'Always Collude'
 
 # Colludes every single round, no matter what.
 
