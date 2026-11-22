@@ -1,6 +1,10 @@
 # Prisoner's Dilemma Tournament
 
-You are going to write a small Python strategy for a famous game, and then every
+Someone has stolen Mr. Bartucz's favorite chocolate chip cookies! You and another classmate
+have been caught with crumbs on your shirts. You are questioned in separate
+rooms and cannot talk to each other. 
+
+You are going to write a small Python strategy for this famous game, and then every
 strategy in the class plays every other strategy. Whoever spends the least time
 in prison wins a duck. In fact, the strategies of the top THREE people will win ducks.
 
@@ -9,9 +13,7 @@ the **baseline**. To win a duck you must be in the top three **and** finish abov
 
 ## The game
 
-Someone has stolen Mr. Bartucz's favorite chocolate chip cookies. You and your partner
-have been caught with crumbs on your shirts. You are questioned in separate
-rooms and cannot talk to each other. Each of you has two choices:
+Each player has two choices:
 
 - **Collude** (`'c'`) – stay quiet and stick with your partner.
 - **Betray** (`'b'`) – tell on your partner to get a better deal for yourself.
