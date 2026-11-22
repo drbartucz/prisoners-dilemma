@@ -3,7 +3,7 @@
 Run this file to play every strategy against every other strategy:
 
     python run_tournament.py                  strategies + examples (for practice)
-    python run_tournament.py --no-examples    only "strategies", without the demo (the real thing)
+    python run_tournament.py --no-examples    only the "strategies" folder (the real thing)
     python run_tournament.py --check          only check the files, don't play
     python run_tournament.py --seconds 120    stretch the show out to about 2 minutes
     python run_tournament.py --seconds 0      no pauses, finish as fast as possible
@@ -72,11 +72,17 @@ class Player:
         self.file = file            # e.g. 'strategies/maria.py'
         self.move = move
         self.source = source
+        self.is_baseline = Path(file).name.casefold() == DEMO_FILENAME
+        self.is_example = file.startswith('examples/')
         self.total = 0.0            # sum of years-per-round over games played
         self.games = 0
         self.bad_moves = 0
         self.first_error = ''
         self.versus = {}            # opponent Player -> my years per round in each game
+
+    @property
+    def label(self):
+        return self.name + ' (baseline)' if self.is_baseline else self.name
 
     @property
     def average(self):
@@ -122,7 +128,7 @@ def probe(path):
             theirs += random.choice('cb') if opponent == 'random' else opponent[i % len(opponent)]
 
 
-def load_strategies(folders, skip_demo=False):
+def load_strategies(folders):
     '''Return (players, problems, warnings). Files with problems do not play.'''
     players, problems, warnings = [], [], []
     paths = []
@@ -180,8 +186,6 @@ def load_strategies(folders, skip_demo=False):
         if is_demo_file and not is_demo_name:
             problems.append((player.file, 'strategy_name was changed to "{}" but the file is still '
                              'called {} - rename the file'.format(player.name, DEMO_FILENAME)))
-        elif is_demo_file and skip_demo:
-            pass                        # the demo sits out the real tournament
         elif is_demo_name and not is_demo_file:
             problems.append((player.file, 'the file was renamed but strategy_name is still '
                              '"{}" - change strategy_name'.format(player.name)))
@@ -276,6 +280,22 @@ def standings(players):
 # ----------------------------------------------------------------------------
 # Showing results
 # ----------------------------------------------------------------------------
+def prize_lines(players):
+    '''Who wins a prize: the top three entries that finished above the baseline.'''
+    ranked = standings(players)
+    baseline = [p for p in ranked if p.is_baseline and p.games]
+    entries = [p for p in ranked if not p.is_baseline and not p.is_example]
+    if not baseline or not entries:
+        return []
+    above = [p for p in ranked[:ranked.index(baseline[0])] if not p.is_example]
+    lines = ['', '   PRIZES go to the top three who finished above the baseline ({}):'.format(DEMO_NAME)]
+    lines += ['      {}. {}'.format(place, p.name) for place, p in enumerate(above[:3], 1)]
+    if len(above) < 3:
+        lines.append('      Nobody else finished above the baseline.' if above else
+                     '      Nobody finished above the baseline!')
+    return lines
+
+
 def leaderboard_lines(players, previous_ranks=None, limit=None):
     lines = ['       #  {:<{w}}  {:>11}  {:>5}'.format('Player', 'Years/round', 'Games', w=MAX_NAME_LENGTH),
              '      --  {}  {}  {}'.format('-' * MAX_NAME_LENGTH, '-' * 11, '-' * 5)]
@@ -286,7 +306,7 @@ def leaderboard_lines(players, previous_ranks=None, limit=None):
             arrow = '▲' if rank < previous_ranks[player] else \
                     '▼' if rank > previous_ranks[player] else ' '
         lines.append('   {} {:>3}  {:<{w}}  {:>11.2f}  {:>5}'.format(
-            arrow, rank, player.name, player.average, player.games, w=MAX_NAME_LENGTH))
+            arrow, rank, player.label, player.average, player.games, w=MAX_NAME_LENGTH))
     if limit and len(ranked) > limit:
         lines.append('         ... and {} more (see {})'.format(len(ranked) - limit, RESULTS_FILENAME))
     return lines
@@ -332,6 +352,8 @@ def build_report(players, games, problems, warnings, status, total_games):
            "Years/round is the average over all of a player's games.",
            '', '=' * 80, 'LEADERBOARD', '=' * 80]
     out += leaderboard_lines(players)
+    if status == 'FINAL RESULTS':
+        out += prize_lines(players)
 
     if problems:
         out += ['', '=' * 80, 'FILES THAT COULD NOT PLAY', '=' * 80]
@@ -387,7 +409,7 @@ def print_notes(title, notes):
 def main():
     parser = argparse.ArgumentParser(description="Run a Prisoner's Dilemma tournament.")
     parser.add_argument('folders', nargs='*', help='folders of strategies (default: strategies and examples)')
-    parser.add_argument('--no-examples', action='store_true', help='play only the strategies folder, and leave out the demo')
+    parser.add_argument('--no-examples', action='store_true', help='play only the strategies folder (the demo stays in as the baseline)')
     parser.add_argument('--check', action='store_true', help="check the files but don't play")
     parser.add_argument('--seconds', type=float, default=10,
                         help='roughly how long the tournament should take on screen (default 10, 0 = no pauses)')
@@ -414,7 +436,7 @@ def main():
 
     print('\nChecking the strategy files...')
     keyboard, sys.stdin = sys.stdin, io.StringIO('')    # a strategy calling input() gets an error, not a wait
-    players, problems, warnings = load_strategies(folders, skip_demo=args.no_examples)
+    players, problems, warnings = load_strategies(folders)
 
     print("\nPRISONER'S DILEMMA TOURNAMENT")
     print('\n{} strategies ready to play:'.format(len(players)))
@@ -477,6 +499,8 @@ def main():
         sys.stdout.write('\x1b[2J\x1b[H')
     print('\n   {} - {} games played\n'.format(status, len(games)))
     print('\n'.join(leaderboard_lines(players)))
+    if status == 'FINAL RESULTS':
+        print('\n'.join(prize_lines(players)))
     sloppy = [(p.file, '{} bad moves ({} years each). The first one {}'.format(p.bad_moves, BAD_MOVE, p.first_error))
               for p in standings(players) if p.bad_moves]
     print_notes('BAD MOVES:', sloppy)

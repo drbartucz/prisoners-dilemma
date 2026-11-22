@@ -4,6 +4,9 @@ You are going to write a small Python strategy for a famous game, and then every
 strategy in the class plays every other strategy. Whoever spends the least time
 in prison wins a duck. In fact, the strategies of the top THREE people will win ducks.
 
+There is one catch: the unchanged `demo_strategy.py` plays in the tournament too, as
+the **baseline**. To win a duck you must be in the top three **and** finish above it.
+
 ## The game
 
 Someone has stolen Mr. Bartucz's favorite chocolate chip cookies. You and your partner
@@ -134,7 +137,7 @@ them to is fine. Then:
 | Command                                    | What it does                                             |
 |--------------------------------------------|----------------------------------------------------------|
 | `python run_tournament.py --check --no-examples` | Checks every file and lists problems, without playing |
-| `python run_tournament.py --no-examples`   | The real tournament: only `strategies`, without the demo |
+| `python run_tournament.py --no-examples`   | The real tournament: only the `strategies` folder        |
 | `python run_tournament.py --no-examples --seconds 120` | Same, stretched to about two minutes for suspense |
 | `python run_tournament.py`                 | Practice: `strategies` plus `examples`                   |
 | `python run_tournament.py some_folder`     | Plays the strategies in any other folder                 |
@@ -148,7 +151,8 @@ them to is fine. Then:
 - Endless loops are normally caught before the start. If the tournament hangs
   anyway, press Ctrl+C: it reports which two files were playing and saves the
   results so far.
-- `demo_strategy.py` plays in practice runs but sits out when you use
-  `--no-examples`, so you can leave it in the folder.
+- Leave `demo_strategy.py` in the `strategies` folder. It plays as the baseline,
+  marked on the leaderboard, and the results end with the top three students
+  who finished above it. If it is missing, no prize list is shown.
 - The years for each outcome, the number of rounds and the number of games per
   pair are at the top of `run_tournament.py`.
